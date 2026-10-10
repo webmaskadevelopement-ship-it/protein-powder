@@ -1,0 +1,1614 @@
+<!DOCTYPE html><html class="scroll-smooth" lang="en" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Plus+Jakarta+Sans:wght@100..900&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }
+/* 1440px Ultra-Wide Container Expansion & Custom Palette */
+.max-w-7xl, .max-w-5xl, .max-w-\[1440px\] {
+  max-width: 1440px !important;
+}
+
+body {
+  background-color: #F8F7F2 !important;
+  color: #1A1A1A !important;
+}
+
+.glass-card-premium {
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid #E0E0E0;
+  box-shadow: 0 10px 30px -10px rgba(31, 62, 33, 0.08);
+}
+.luxury-depth-shadow {
+  box-shadow: 0 20px 40px -15px rgba(31, 62, 33, 0.12), 0 8px 16px -6px rgba(0, 0, 0, 0.04);
+}
+.hero-glow-backplate {
+  filter: drop-shadow(0 25px 35px rgba(31, 62, 33, 0.18));
+}
+.tab-active {
+  background-color: #1F3E21 !important;
+  color: #ffffff !important;
+  box-shadow: 0 4px 12px rgba(31, 62, 33, 0.25);
+}
+.tab-inactive {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #555555;
+}
+.tab-inactive:hover {
+  background-color: #ffffff;
+  color: #1F3E21;
+}
+h1, h2, h3, .font-serif-heading {
+  font-family: 'Playfair Display', Georgia, serif;
+  color: #1F3E21;
+}
+body, p, span, button, input, table, nav, .font-sans-body {
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+}
+.font-body-lg, .font-body-md, .font-body-sm {
+  font-family: 'Inter', sans-serif;
+  color: #555555;
+}
+.font-eyebrow, .font-label-md, .font-label-sm, .font-stat-label, .font-stat-number {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Custom Gold Stars & Accent Highlights */
+.text-tertiary-container, .text-tertiary, .text-amber-400, .text-yellow-500 {
+  color: #D4AF37 !important;
+}
+
+/* Smooth Scroll & Entrance Animations */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(35px) scale(0.98);
+  transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Floating animation for hero product image */
+@keyframes softFloat {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(1deg); }
+}
+.animate-soft-float {
+  animation: softFloat 5s ease-in-out infinite;
+}
+
+/* Breathing glow aura */
+@keyframes breathingGlow {
+  0%, 100% { opacity: 0.35; transform: scale(1); }
+  50% { opacity: 0.75; transform: scale(1.08); }
+}
+.animate-breathing-glow {
+  animation: breathingGlow 4s ease-in-out infinite;
+}
+
+/* Button Shimmer Effect */
+@keyframes btnShimmer {
+  0% { transform: translateX(-100%) rotate(25deg); }
+  100% { transform: translateX(250%) rotate(25deg); }
+}
+.btn-shimmer-effect {
+  position: relative;
+  overflow: hidden;
+}
+.btn-shimmer-effect::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 50%;
+  height: 200%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+  transform: rotate(25deg);
+  animation: btnShimmer 4s infinite;
+}
+
+.interactive-hover-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.interactive-hover-card:hover {
+  transform: translateY(-6px) scale(1.015);
+  box-shadow: 0 25px 50px -12px rgba(31, 62, 33, 0.18);
+}
+
+/* Button hover transitions */
+.button {
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.button:hover {
+  transform: translateY(-2px);
+}
+
+/* Keyframe float animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+.element {
+  animation: float 4s ease-in-out infinite;
+}
+</style><link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /><script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#1F3E21", "vegan-green": "#2A4B2C", "dark-emerald": "#142A16", "surface-variant": "#EEF6F0", "tertiary-fixed": "#EEF6F0", "on-secondary-container": "#1F3E21", "secondary-container": "#EEF6F0", "tertiary-container": "#D4AF37", "gold-accent": "#D4AF37", "background-light": "#F8F7F2", "surface": "#F8F7F2", "navy-heading": "#1F3E21", "on-surface": "#1A1A1A", "surface-tint": "#1F3E21", "primary-container": "#1F3E21", "inverse-surface": "#142A16", "dark-section-text": "#F8F7F2", "surface-container-lowest": "#ffffff", "inverse-primary": "#2A4B2C", "on-secondary-fixed": "#1F3E21", "dark-section-bg": "#142A16", "on-secondary": "#ffffff", "error": "#ba1a1a", "on-primary": "#ffffff", "surface-container-low": "#EEF6F0", "surface-container": "#EEF6F0", "outline-variant": "#E0E0E0", "inverse-on-surface": "#F8F7F2", "on-error": "#ffffff", "surface-container-high": "#EEF6F0", "error-container": "#ffdad6", "primary-fixed-dim": "#2A4B2C", "outline": "#E0E0E0", "secondary": "#2A4B2C", "dark-section-border": "rgba(212, 175, 55, 0.2)", "on-surface-variant": "#555555", "text-muted-light": "#555555", "primary-fixed": "#EEF6F0", "on-tertiary-fixed": "#1F3E21", "surface-bright": "#F8F7F2", "on-tertiary": "#ffffff", "tertiary": "#D4AF37", "on-tertiary-container": "#1F3E21", "on-tertiary-fixed-variant": "#1F3E21", "on-background": "#1A1A1A", "secondary-fixed-dim": "#EEF6F0", "on-primary-fixed": "#1F3E21", "on-error-container": "#93000a", "surface-container-highest": "#EEF6F0", "background": "#F8F7F2", "on-secondary-fixed-variant": "#1F3E21", "on-primary-container": "#EEF6F0", "dark-section-surface": "#1F3721", "on-primary-fixed-variant": "#1F3E21", "fudge-brown": "#1F3E21", "surface-light": "#FFFFFF", "dark-section-muted": "#A0AEC0", "border-light": "#E0E0E0", "tertiary-fixed-dim": "#D4AF37", "vanilla-cream": "#EEF6F0", "surface-dim": "#EEF6F0", "secondary-fixed": "#EEF6F0" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-3xl": "6rem", "space-sm": "0.5rem", "space-lg": "1.5rem", "space-2xl": "4rem", "margin": "2rem", "space-xs": "0.25rem", "space-md": "1rem", "gutter-mobile": "1rem", "margin-mobile": "1.25rem", "space-xl": "2.5rem", "gutter": "1.5rem" }, "fontFamily": { "serif": ["Playfair Display", "Georgia", "serif"], "sans": ["Plus Jakarta Sans", "Inter", "sans-serif"], "body-md": ["Inter", "sans-serif"], "headline-lg": ["Playfair Display", "Georgia", "serif"], "headline-md": ["Playfair Display", "Georgia", "serif"], "label-md": ["Plus Jakarta Sans", "sans-serif"], "headline-xl-mobile": ["Playfair Display", "Georgia", "serif"], "body-sm": ["Inter", "sans-serif"], "eyebrow": ["Plus Jakarta Sans", "sans-serif"], "display-hero-mobile": ["Playfair Display", "Georgia", "serif"], "stat-label": ["Plus Jakarta Sans", "sans-serif"], "display-hero": ["Playfair Display", "Georgia", "serif"], "headline-sm": ["Playfair Display", "Georgia", "serif"], "headline-xl": ["Playfair Display", "Georgia", "serif"], "body-lg": ["Inter", "sans-serif"], "stat-number": ["Plus Jakarta Sans", "sans-serif"], "label-sm": ["Plus Jakarta Sans", "sans-serif"] }, "fontSize": { "body-md": ["15px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600" }], "headline-xl-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "700" }], "body-sm": ["13px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "400" }], "eyebrow": ["12px", { "lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700" }], "display-hero-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "stat-label": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-sm": ["18px", { "lineHeight": "26px", "letterSpacing": "-0.005em", "fontWeight": "600" }], "headline-xl": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["18px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "400" }], "stat-number": ["32px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "label-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.02em", "fontWeight": "600" }] } } } };</script><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,400;1,700&amp;display=swap" rel="stylesheet">
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head><body class="bg-background-light font-body-md text-on-surface antialiased relative overflow-x-hidden">
+<!-- FULL-VIEWPORT 3D BACKGROUND CANVAS -->
+<div id="bg-3d-canvas" class="fixed inset-0 pointer-events-none z-0"></div>
+
+<!-- MAIN STICKY HEADER -->
+<div class="fixed top-0 left-0 right-0 z-50">
+<div class="w-full bg-navy-heading text-dark-section-text py-2 px-margin text-center overflow-hidden border-b border-white/10">
+<div class="inline-flex items-center gap-3 text-center font-eyebrow text-eyebrow tracking-widest uppercase">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-secondary-container shadow-[0_0_8px_#71c7fe]"></span>NEW · VANILLA FUDGE PLANT PROTEIN · RESERVE EDITION</span>
+<span class="text-dark-section-muted">|</span>
+<span class="hidden sm:inline text-dark-section-muted">CERTIFIED VEGAN AUSTRALIA</span>
+<span class="hidden sm:inline text-dark-section-muted">|</span>
+<span class="hidden md:inline text-dark-section-muted">ZERO ADDED SUGAR</span>
+<span class="hidden md:inline text-dark-section-muted">|</span>
+<span class="hidden lg:inline text-dark-section-muted">MELBOURNE CRAFTED</span>
+</div>
+</div>
+<header class="w-full bg-surface-light/90 backdrop-blur-xl border-b border-white/60 shadow-[0_4px_20px_rgba(0,0,0,0.03)]">
+<div class="h-16 lg:h-20 max-w-[1440px] mx-auto px-margin flex items-center justify-between gap-space-lg">
+<a href="#" class="flex items-center gap-3 group">
+  <!-- Circular Brand Logo Badge -->
+  <div class="relative w-11 h-11 sm:w-13 sm:h-13 shrink-0 rounded-full overflow-hidden shadow-md border-2 border-[#1F3E21]/20 bg-[#EEF6F0] flex items-center justify-center transition-transform group-hover:scale-105">
+    <img 
+      src="images/full_logo.png" 
+      alt="THE NEW ME 2.0 Reverse Aging Logo" 
+      class="w-full h-full object-cover"
+    />
+  </div>
+  <div class="flex flex-col">
+    <span class="font-headline-sm text-base sm:text-lg text-navy-heading tracking-tight uppercase font-extrabold leading-none">THE NEW ME 2.0</span>
+    <span class="text-[9px] text-primary uppercase font-bold tracking-widest leading-tight mt-0.5">REVERSE AGING • PLANT PROTEIN</span>
+  </div>
+</a>
+<nav class="hidden md:flex items-center gap-1 sm:gap-2 px-3 py-1.5 rounded-full bg-surface-container-low/90 border border-white/90 shadow-sm backdrop-blur-md">
+<a class="px-3 py-1.5 rounded-full text-xs lg:text-sm font-bold text-navy-heading/85 hover:text-navy-heading hover:bg-white transition-all duration-200 cursor-pointer flex items-center gap-1" href="#benefits">Benefits</a>
+<a class="px-3 py-1.5 rounded-full text-xs lg:text-sm font-bold text-navy-heading/85 hover:text-navy-heading hover:bg-white transition-all duration-200 cursor-pointer flex items-center gap-1" href="#comparison">Comparison</a>
+<a class="px-3 py-1.5 rounded-full text-xs lg:text-sm font-bold text-navy-heading/85 hover:text-navy-heading hover:bg-white transition-all duration-200 cursor-pointer flex items-center gap-1" href="#ingredients">Ingredients</a>
+<a class="px-3 py-1.5 rounded-full text-xs lg:text-sm font-bold text-navy-heading/85 hover:text-navy-heading hover:bg-white transition-all duration-200 cursor-pointer flex items-center gap-1" href="#routine">Routine</a>
+<a class="px-3 py-1.5 rounded-full text-xs lg:text-sm font-bold text-navy-heading/85 hover:text-navy-heading hover:bg-white transition-all duration-200 cursor-pointer flex items-center gap-1" href="#nutrition">Nutrition</a>
+<a class="px-3 py-1.5 rounded-full text-xs lg:text-sm font-bold text-navy-heading/85 hover:text-navy-heading hover:bg-white transition-all duration-200 cursor-pointer flex items-center gap-1" href="#reviews">Reviews</a>
+</nav>
+<div class="flex items-center gap-space-sm sm:gap-space-md">
+<a class="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 rounded-full bg-navy-heading text-on-primary text-label-sm font-semibold hover:bg-primary transition-all shadow-sm cursor-pointer" onclick="openCartDrawer()" href="javascript:void(0)">
+<span class="">Order Now</span>
+<span class="text-secondary-container font-mono">$49.95</span>
+</a>
+<button aria-label="Shopping Cart" onclick="openCartDrawer()" class="relative flex items-center p-2 text-on-surface-variant hover:text-on-surface transition-colors rounded-lg hover:bg-surface-container/60 cursor-pointer" type="button">
+<span class="material-symbols-outlined text-[22px]">shopping_bag</span>
+<span class="absolute -top-1 -right-1 bg-primary text-on-primary font-stat-label text-stat-label w-5 h-5 rounded-full flex items-center justify-center font-bold shadow-md">0</span>
+</button>
+<!-- Mobile Menu Hamburger Button -->
+<button aria-label="Toggle Mobile Menu" id="mobile-menu-btn" onclick="toggleMobileMenu()" class="md:hidden flex items-center p-2 text-navy-heading hover:bg-surface-container/60 rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-[24px]">menu</span>
+</button>
+</div>
+</div>
+</header>
+
+<!-- Mobile Navigation Drawer -->
+<div id="mobile-menu-drawer" class="hidden md:hidden bg-white/95 backdrop-blur-2xl border-b border-white/80 px-margin py-4 flex flex-col gap-3 shadow-xl transition-all">
+  <a onclick="toggleMobileMenu()" class="font-label-md text-label-md text-navy-heading font-semibold py-2 border-b border-border-light/60 flex items-center justify-between" href="#benefits">
+    <span>Benefits</span><span class="material-symbols-outlined text-xs">chevron_right</span>
+  </a>
+  <a onclick="toggleMobileMenu()" class="font-label-md text-label-md text-navy-heading font-semibold py-2 border-b border-border-light/60 flex items-center justify-between" href="#comparison">
+    <span>Comparison</span><span class="material-symbols-outlined text-xs">chevron_right</span>
+  </a>
+  <a onclick="toggleMobileMenu()" class="font-label-md text-label-md text-navy-heading font-semibold py-2 border-b border-border-light/60 flex items-center justify-between" href="#ingredients">
+    <span>Ingredients</span><span class="material-symbols-outlined text-xs">chevron_right</span>
+  </a>
+  <a onclick="toggleMobileMenu()" class="font-label-md text-label-md text-navy-heading font-semibold py-2 border-b border-border-light/60 flex items-center justify-between" href="#routine">
+    <span>Routine</span><span class="material-symbols-outlined text-xs">chevron_right</span>
+  </a>
+  <a onclick="toggleMobileMenu()" class="font-label-md text-label-md text-navy-heading font-semibold py-2 border-b border-border-light/60 flex items-center justify-between" href="#nutrition">
+    <span>Nutrition</span><span class="material-symbols-outlined text-xs">chevron_right</span>
+  </a>
+  <a onclick="toggleMobileMenu()" class="font-label-md text-label-md text-navy-heading font-semibold py-2 flex items-center justify-between" href="#reviews">
+    <span>Reviews</span><span class="material-symbols-outlined text-xs">chevron_right</span>
+  </a>
+  <a onclick="toggleMobileMenu(); openCartDrawer()" class="w-full mt-2 py-3 rounded-full bg-navy-heading text-white text-center font-bold text-xs uppercase tracking-wider shadow-md cursor-pointer" href="javascript:void(0)">
+    Order Now — $49.95
+  </a>
+</div>
+
+</div>
+<main class="w-full bg-background-light min-h-screen pt-24 lg:pt-28">
+<div class="flex flex-col w-full">
+<!-- HERO SECTION (Refined Asymmetrical Editorial Layout) -->
+<section class="relative w-full max-w-[1440px] mx-auto px-margin overflow-hidden pt-10 pb-14 lg:pt-14 lg:pb-18">
+<div class="absolute -top-24 -left-20 w-96 h-96 rounded-full bg-gradient-to-tr from-vanilla-cream/30 to-secondary-container/15 blur-3xl pointer-events-none -z-10"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center relative">
+<!-- Hero Left Column (Editorial Typography with Generous Breathing Room) -->
+<div class="lg:col-span-6 flex flex-col gap-6 z-10">
+<div class="inline-flex items-center gap-2">
+<span class="px-4 py-1.5 rounded-full bg-surface-light text-navy-heading font-eyebrow text-eyebrow tracking-widest uppercase border border-border-light/80 shadow-xs flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-vegan-green shadow-xs"></span>
+          CELLULAR LONGEVITY PROTOCOL · 100% PLANT BIO-AVAILABLE
+        </span>
+</div>
+
+<!-- Headline with generous whitespace and Playfair Display Serif -->
+<h1 class="font-headline-xl text-4xl sm:text-5xl lg:text-6xl font-serif text-navy-heading tracking-tight leading-[1.15] drop-shadow-xs my-1">
+<span class="font-serif font-normal text-navy-heading/90 block mb-1">Reverse Aging.</span>Rebuild Strength. Feel&nbsp;Alive.
+      </h1>
+
+<!-- Lead Subtext -->
+<p class="font-body-lg text-lg text-on-surface-variant max-w-xl leading-relaxed font-normal">
+        Australia’s premier plant-powered reverse aging formulation. Formulated with zero-bloat botanical protein isolates, gut-nourishing chicory prebiotics, and essential B12 for ageless cellular vitality.
+      </p>
+
+<!-- Ultra-Premium Apothecary Glassmorphic Macro Metrics Grid -->
+<div class="w-full p-2.5 sm:p-3.5 rounded-2xl bg-white/90 backdrop-blur-xl border border-white/90 shadow-[0_10px_25px_-5px_rgba(16,46,92,0.08)] grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-3 my-2">
+
+  <!-- Metric 1: 18.8g Plant Protein -->
+  <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container-low/80 border border-white/80 shadow-2xs hover:bg-white transition-all">
+    <div class="w-8 h-8 rounded-lg bg-navy-heading/10 text-navy-heading flex items-center justify-center font-bold shrink-0">
+      <span class="material-symbols-outlined text-[18px]">fitness_center</span>
+    </div>
+    <div class="flex flex-col min-w-0">
+      <span class="font-stat-number text-base sm:text-lg font-extrabold text-navy-heading leading-tight truncate">18.8g</span>
+      <span class="font-stat-label text-[10px] sm:text-[11px] text-text-muted-light uppercase tracking-wider font-bold truncate">Plant Protein</span>
+    </div>
+  </div>
+
+  <!-- Metric 2: 4.8g Prebiotic Fibre -->
+  <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container-low/80 border border-white/80 shadow-2xs hover:bg-white transition-all">
+    <div class="w-8 h-8 rounded-lg bg-primary/10 text-primary flex items-center justify-center font-bold shrink-0">
+      <span class="material-symbols-outlined text-[18px]">spa</span>
+    </div>
+    <div class="flex flex-col min-w-0">
+      <span class="font-stat-number text-base sm:text-lg font-extrabold text-navy-heading leading-tight truncate">4.8g</span>
+      <span class="font-stat-label text-[10px] sm:text-[11px] text-text-muted-light uppercase tracking-wider font-bold truncate">Prebiotic Fibre</span>
+    </div>
+  </div>
+
+  <!-- Metric 3: 0.0g Added Sugar -->
+  <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-vegan-green/10 border border-vegan-green/20 shadow-2xs hover:bg-vegan-green/15 transition-all">
+    <div class="w-8 h-8 rounded-lg bg-vegan-green text-white flex items-center justify-center font-bold shrink-0 shadow-2xs">
+      <span class="material-symbols-outlined text-[16px]">check_circle</span>
+    </div>
+    <div class="flex flex-col min-w-0">
+      <span class="font-stat-number text-base sm:text-lg font-extrabold text-vegan-green leading-tight truncate">0.0g</span>
+      <span class="font-stat-label text-[10px] sm:text-[11px] text-vegan-green uppercase tracking-wider font-bold truncate">Added Sugar</span>
+    </div>
+  </div>
+
+  <!-- Metric 4: 119 Kcal -->
+  <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-surface-container-low/80 border border-white/80 shadow-2xs hover:bg-white transition-all">
+    <div class="w-8 h-8 rounded-lg bg-tertiary-container/10 text-tertiary-container flex items-center justify-center font-bold shrink-0">
+      <span class="material-symbols-outlined text-[18px]">local_fire_department</span>
+    </div>
+    <div class="flex flex-col min-w-0">
+      <span class="font-stat-number text-base sm:text-lg font-extrabold text-navy-heading leading-tight truncate">119</span>
+      <span class="font-stat-label text-[10px] sm:text-[11px] text-text-muted-light uppercase tracking-wider font-bold truncate">Kcal / Scoop</span>
+    </div>
+  </div>
+
+</div>
+
+<!-- Unified Primary Action Button Group -->
+<div class="flex flex-wrap items-center gap-4 pt-1">
+<a class="px-8 py-3.5 rounded-full bg-navy-heading hover:bg-primary text-white font-label-md text-label-md transition-all shadow-md hover:shadow-xl hover:-translate-y-0.5 active:scale-95 font-bold tracking-wide flex items-center gap-2" href="#nutrition">
+<span>Acquire Now — $49.95</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="px-7 py-3.5 rounded-full bg-surface-light hover:bg-surface-container-low text-navy-heading font-label-md text-label-md transition-all border border-border-light shadow-xs hover:shadow-sm font-semibold" href="#comparison">
+          Explore Science
+        </a>
+</div>
+
+<!-- Hero Micro-Social Proof (Single clean line) -->
+<div class="flex flex-wrap items-center gap-4 pt-1 text-on-surface-variant font-label-sm text-xs">
+<div class="flex items-center gap-1 text-tertiary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="ml-1 font-bold text-navy-heading">4.9 / 5</span>
+</div>
+<span class="text-border-light">•</span>
+<span class="flex items-center gap-1 font-semibold text-vegan-green">
+<span class="material-symbols-outlined text-[16px]">eco</span> Certified Vegan Australia
+        </span>
+<span class="text-border-light">•</span>
+<span class="flex items-center gap-1 font-semibold text-navy-heading">
+<span class="material-symbols-outlined text-[16px]">verified</span> 30-Day Guarantee
+        </span>
+</div>
+</div>
+
+<!-- Hero Right Column featuring 1st Image (Large Premium Lifestyle Product Showcase) -->
+<div class="lg:col-span-6 relative flex flex-col justify-center items-center py-2 z-10">
+  <div class="absolute -top-10 -right-10 w-[480px] h-[480px] rounded-full bg-gradient-to-tr from-secondary-container/25 via-vanilla-cream/35 to-tertiary-fixed/25 blur-3xl -z-10 pointer-events-none"></div>
+
+  <!-- Main Luxury Card Frame -->
+  <div class="relative w-full rounded-3xl luxury-depth-shadow bg-surface-light border border-border-light/80 overflow-hidden group transition-all duration-500 hover:-translate-y-1.5 hover:shadow-2xl">
+    
+    <!-- Top Mode Switcher Bar -->
+    <div class="absolute top-4 left-4 right-4 z-30 flex items-center justify-between pointer-events-auto">
+      <span class="px-3.5 py-1.5 rounded-full bg-navy-heading/90 text-white font-eyebrow text-[10px] tracking-widest uppercase shadow-md backdrop-blur-md flex items-center gap-1.5 border border-white/20">
+        <span class="w-2 h-2 rounded-full bg-vegan-green animate-pulse"></span>
+        RESERVE EDITION · 500G
+      </span>
+      <div class="flex items-center gap-2">
+        <button id="toggle-hero-3d-view" class="px-3.5 py-1.5 rounded-full bg-white/95 hover:bg-white text-navy-heading text-xs font-bold shadow-md transition-all cursor-pointer border border-border-light flex items-center gap-1.5" type="button" onclick="toggleHero3DStage(this)">
+          <span class="material-symbols-outlined text-[16px]">view_in_ar</span>
+          <span id="toggle-hero-3d-text">Switch to 3D Canvas</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- 1st Image Showcase Container -->
+    <div id="hero-img-showcase" class="relative w-full h-[460px] sm:h-[510px] lg:h-[540px] overflow-hidden bg-background-light">
+      <img alt="The NEW ME Vanilla Fudge Plant Protein Splash Showcase" class="w-full h-full object-cover transform transition-transform duration-700 group-hover:scale-105" src="images/hero_product_splash.jpg">
+      
+      <!-- Interactive Hotspot Overlays on Image 1 -->
+      <div class="absolute top-[32%] right-[18%] z-20">
+        <button class="3d-hotspot-btn w-8.5 h-8.5 rounded-full bg-navy-heading text-white flex items-center justify-center shadow-xl border-2 border-white hover:scale-110 transition-transform cursor-pointer" data-target="tooltip-protein" type="button">
+          <span class="material-symbols-outlined text-[16px]">fitness_center</span>
+        </button>
+        <div id="tooltip-protein" class="hotspot-tooltip hidden absolute top-10 right-0 w-56 p-3 rounded-2xl bg-white/95 backdrop-blur-xl border border-white shadow-2xl text-left z-40">
+          <div class="flex items-center justify-between pb-1 mb-1 border-b border-border-light">
+            <span class="font-bold text-navy-heading text-xs">Pure Plant Bio-Protein</span>
+            <span class="text-[10px] px-1.5 py-0.5 rounded bg-vegan-green/10 text-vegan-green font-bold">2:1:1 BCAA</span>
+          </div>
+          <p class="text-[11px] text-on-surface-variant leading-tight">Triple-blend pea, brown rice &amp; pumpkin seed proteins for rapid muscle recovery.</p>
+        </div>
+      </div>
+
+      <div class="absolute bottom-[35%] left-[22%] z-20">
+        <button class="3d-hotspot-btn w-8.5 h-8.5 rounded-full bg-vegan-green text-white flex items-center justify-center shadow-xl border-2 border-white hover:scale-110 transition-transform cursor-pointer" data-target="tooltip-fibre" type="button">
+          <span class="material-symbols-outlined text-[16px]">spa</span>
+        </button>
+        <div id="tooltip-fibre" class="hotspot-tooltip hidden absolute bottom-10 left-0 w-56 p-3 rounded-2xl bg-white/95 backdrop-blur-xl border border-white shadow-2xl text-left z-40">
+          <div class="flex items-center justify-between pb-1 mb-1 border-b border-border-light">
+            <span class="font-bold text-navy-heading text-xs">4.8g Prebiotic Inulin</span>
+            <span class="text-[10px] px-1.5 py-0.5 rounded bg-primary/10 text-primary font-bold">Zero Bloat</span>
+          </div>
+          <p class="text-[11px] text-on-surface-variant leading-tight">Chicory root fiber feeds beneficial microflora for optimal digestion.</p>
+        </div>
+      </div>
+
+      <!-- Bottom Glassmorphic Overlay Bar -->
+      <div class="absolute bottom-4 left-4 right-4 p-4 bg-surface-light/90 backdrop-blur-xl border border-white/80 rounded-2xl shadow-xl flex items-center justify-between transition-all">
+        <div class="flex flex-col">
+          <span class="font-eyebrow text-eyebrow text-text-muted-light uppercase tracking-wider">Micro-Milled Texture</span>
+          <span class="font-headline-sm text-headline-sm text-navy-heading font-serif">Pure Plant Indulgence</span>
+        </div>
+        <span class="px-3.5 py-1.5 rounded-full bg-navy-heading text-on-primary font-stat-label text-stat-label uppercase tracking-widest shadow-md border border-white/10">100% VEGAN</span>
+      </div>
+    </div>
+
+    <!-- Toggleable WebGL 3D Canvas Container -->
+    <div id="hero-3d-stage" class="hidden relative w-full h-[460px] sm:h-[510px] lg:h-[540px] bg-background-light">
+      <div id="hero-3d-container" class="w-full h-full cursor-grab active:cursor-grabbing"></div>
+    </div>
+
+  </div>
+</div>
+
+</div>
+</section>
+
+<!-- NOURISH YOUR BODY, ELEVATE YOUR WELLNESS SECTION -->
+<section class="w-full relative py-16 sm:py-24 bg-[#06152e] overflow-hidden border-t border-b border-sky-900/40" id="nourish-wellness">
+  <!-- Blurred Product Splash Background Image -->
+  <div class="absolute inset-0 bg-[#040e21]/70 pointer-events-none z-0"></div>
+  <div class="absolute inset-0 overflow-hidden pointer-events-none z-0">
+    <img src="images/hero_product_splash.jpg" alt="THE NEW ME Plant Protein Powder Splash Background" class="w-full h-full object-cover object-center scale-105 opacity-50 blur-md pointer-events-none transition-all">
+  </div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[750px] h-[480px] bg-sky-400/20 rounded-full blur-3xl pointer-events-none z-0"></div>
+
+  <div class="max-w-[1440px] mx-auto px-margin relative z-10 flex justify-center">
+    <!-- Elevated High-Contrast Glassmorphic Card for Maximum Text Visibility -->
+    <div class="w-full max-w-3xl px-6 py-10 sm:py-14 sm:px-12 bg-[#081836]/90 backdrop-blur-2xl border border-sky-400/30 rounded-3xl shadow-[0_30px_90px_-15px_rgba(0,0,0,0.9)] flex flex-col items-center text-center gap-6 relative overflow-hidden">
+      <div class="absolute -top-24 -right-24 w-48 h-48 bg-sky-400/10 rounded-full blur-2xl pointer-events-none"></div>
+      
+      <!-- Top Pill Badge -->
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-sky-300/30 bg-sky-950/60 text-sky-200 text-xs font-bold uppercase tracking-widest shadow-inner">
+        <span class="material-symbols-outlined text-[15px] text-sky-300">eco</span>
+        PURE PLANT NUTRITION
+      </div>
+
+      <!-- Main Headline -->
+      <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl text-white tracking-tight leading-tight">
+        Nourish Your Body,<br>
+        <span class="font-serif text-sky-200 font-normal">Elevate Your Wellness</span>
+      </h2>
+
+      <!-- Subtitle -->
+      <p class="font-sans text-sm sm:text-base text-sky-100/85 max-w-lg leading-relaxed">
+        Science-backed plant nutrition, clean gut-friendly prebiotics, and essential Vitamin B12 curated for your daily, sustainable transformation.
+      </p>
+
+      <!-- Interactive Benefit Pills Row -->
+      <div class="flex flex-wrap items-center justify-center gap-2.5 sm:gap-3 max-w-2xl mt-2">
+        <button type="button" onclick="setActiveNourishFilter('all', this)" class="nourish-pill active px-4 sm:px-5 py-2 rounded-full text-xs font-bold transition-all bg-[#38bdf8] text-[#041229] shadow-md border border-[#38bdf8]">All Benefits</button>
+        <button type="button" onclick="setActiveNourishFilter('fibre', this)" class="nourish-pill px-4 sm:px-5 py-2 rounded-full text-xs font-medium transition-all bg-white/10 hover:bg-white/20 text-white border border-white/20">Gut-Friendly Fibre</button>
+        <button type="button" onclick="setActiveNourishFilter('energy', this)" class="nourish-pill px-4 sm:px-5 py-2 rounded-full text-xs font-medium transition-all bg-white/10 hover:bg-white/20 text-white border border-white/20">Daily Energy &amp; B12</button>
+        <button type="button" onclick="setActiveNourishFilter('protein', this)" class="nourish-pill px-4 sm:px-5 py-2 rounded-full text-xs font-medium transition-all bg-white/10 hover:bg-white/20 text-white border border-white/20">Clean Plant Protein</button>
+        <button type="button" onclick="setActiveNourishFilter('sugar', this)" class="nourish-pill px-4 sm:px-5 py-2 rounded-full text-xs font-medium transition-all bg-white/10 hover:bg-white/20 text-white border border-white/20">Zero Added Sugar</button>
+      </div>
+
+      <!-- Dynamic Pill Highlight Detail Box -->
+      <div id="nourish-pill-detail" class="mt-1 text-xs sm:text-sm text-sky-200/90 bg-sky-950/40 border border-sky-400/20 px-5 py-2.5 rounded-2xl max-w-md transition-all duration-300 font-sans shadow-inner">
+        Comprehensive 3-in-1 formulation supporting digestion, cellular energy, and lean muscle.
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEP 2: THE SOLUTION (BENEFITS & FORMULATION) -->
+<section class="w-full bg-[#FAF7F2] py-16" id="benefits">
+<div class="max-w-[1440px] mx-auto px-margin flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs text-center items-center max-w-2xl mx-auto">
+<span class="px-4 py-1.5 rounded-full bg-vegan-green/10 text-vegan-green font-eyebrow text-eyebrow uppercase tracking-widest border border-vegan-green/20 shadow-xs font-bold">
+  STEP 02 · THE SOLUTION
+</span>
+<h2 class="font-headline-xl text-headline-xl text-navy-heading tracking-tight font-serif"><span class="font-normal font-serif mr-1">Every Scoop</span>Works In Synergy With&nbsp;You</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Scientifically curated plant nutrition engineered to support digestion, balanced metabolic energy, and daily lean recovery without compromise.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-stretch">
+<div class="lg:col-span-4 glass-card-premium rounded-3xl p-space-xl flex flex-col justify-between luxury-depth-shadow hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 relative overflow-hidden min-h-[580px] group">
+<div class="absolute -top-20 -right-20 w-64 h-64 bg-secondary-container/20 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex flex-col gap-space-xs z-10">
+<span class="font-eyebrow text-eyebrow text-primary uppercase tracking-widest">CORE ARCHITECTURE</span>
+<h3 class="text-[32px] text-navy-heading leading-tight"><span class="font-normal font-serif">Complete</span> <span class="font-bold">Nutrition</span></h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-1">Triple-blend plant protein matrix, active prebiotic fibre &amp; bioavailable Vitamin B12.</p>
+</div>
+<div class="relative flex justify-center items-end mt-6 w-full flex-grow z-10">
+<div class="w-full h-84 flex items-end justify-center py-2">
+<img alt="THE NEW ME Vanilla Plant Protein Pouch" class="max-h-84 w-auto object-contain transform group-hover:scale-105 group-hover:-translate-y-2 transition-all duration-500 hero-glow-backplate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLSzQb3wvUH1d4d8M7PJn17bqD5MlU3gXqUUc7kXutxXcCfNbZIZzh30vsuPobrBDP1XFSyZMCYfm_-AGHYd1xFTWw0fEK3kQT65QepK8NUbFymOpJDiL3Be-DnmxrJGJE0n4SEpFLd-TuSgSMCOvwC-KryCoJz6dzftDuXeKOhla5vaza1ulmbu2abyZpmJKLIeFry4aI8hKaoK1g6pzjiL_h01KeTFaDb16LGN9eakvaVckD1mBYDA">
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<div class="glass-card-premium rounded-3xl p-space-xl flex flex-col justify-between luxury-depth-shadow hover:-translate-y-1.5 hover:shadow-xl transition-all duration-400 flex-1 min-h-[275px]">
+<div class="flex items-center justify-center gap-2 pt-2">
+<div class="flex flex-col items-center justify-center px-3.5 py-2.5 rounded-xl bg-surface-container text-navy-heading border border-white/80 shadow-sm text-center min-w-[68px]">
+<span class="font-label-sm text-label-sm text-text-muted-light uppercase tracking-wider">Zero</span>
+<span class="font-bold font-label-md text-label-md">Added Sugar</span>
+</div>
+<div class="flex flex-col items-center justify-center px-4 py-2.5 rounded-xl bg-navy-heading text-on-primary text-center min-w-[76px] shadow-md border border-white/10">
+<span class="font-stat-number text-stat-number leading-none">24g+</span>
+<span class="font-stat-label text-stat-label uppercase tracking-widest text-secondary-container mt-1">EAA & BCAA</span>
+</div>
+<div class="flex flex-col items-center justify-center px-3.5 py-2.5 rounded-xl bg-surface-container text-navy-heading border border-white/80 shadow-sm text-center min-w-[68px]">
+<span class="font-label-sm text-label-sm text-text-muted-light uppercase tracking-wider">Sub 2g</span>
+<span class="font-bold font-label-md text-label-md">Clean Fat</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs mt-6">
+<h3 class="text-[24px] text-navy-heading"><span class="font-normal font-serif">Balanced</span> <span class="font-bold">Macros</span></h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Sustained carbohydrates, pure proteins, and clean plant fats in clinical ratios.</p>
+</div>
+</div>
+<div class="glass-card-premium rounded-3xl p-space-xl flex flex-col justify-between luxury-depth-shadow hover:-translate-y-1.5 hover:shadow-xl transition-all duration-400 flex-1 min-h-[275px]">
+<div class="flex items-center justify-center pt-2">
+<div class="w-24 h-24 rounded-2xl bg-gradient-to-tr from-vanilla-cream/50 to-secondary-container/20 border border-white/80 flex items-center justify-center shadow-md transform hover:rotate-3 transition-transform">
+<span class="material-symbols-outlined text-[44px] text-tertiary">nutrition</span>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs mt-6">
+<h3 class="text-[24px] text-navy-heading"><span class="font-normal font-serif">Protein</span> <span class="font-bold">For Satiety</span></h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Optimal botanical isolate ratio engineered to stabilize glucose and preserve lean muscle mass.</p>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<div class="glass-card-premium rounded-3xl p-space-xl flex flex-col justify-between luxury-depth-shadow hover:-translate-y-1.5 hover:shadow-xl transition-all duration-400 flex-1 min-h-[275px]">
+<div class="flex items-center justify-center pt-2">
+<div class="flex items-center -space-x-3">
+<div class="w-12 h-12 rounded-full border-2 border-surface-light bg-surface-container flex items-center justify-center text-primary font-bold overflow-hidden shadow-md"><span class="material-symbols-outlined text-[24px]">person</span></div>
+<div class="w-12 h-12 rounded-full border-2 border-surface-light bg-secondary-container/40 flex items-center justify-center text-navy-heading font-bold overflow-hidden shadow-md"><span class="material-symbols-outlined text-[24px]">person_4</span></div>
+<div class="w-12 h-12 rounded-full border-2 border-surface-light bg-vegan-green/20 flex items-center justify-center text-vegan-green font-bold overflow-hidden shadow-md"><span class="material-symbols-outlined text-[24px]">verified</span></div>
+<div class="w-12 h-12 rounded-full border-2 border-surface-light bg-navy-heading text-on-primary font-label-sm text-label-sm flex items-center justify-center font-bold shadow-md">+10k</div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs mt-6">
+<h3 class="text-[24px] text-navy-heading"><span class="font-normal font-serif">Clinically</span> <span class="font-bold">Supported</span></h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Crafted with laboratory certified botanical testing and Australian vegan audit standards.</p>
+</div>
+</div>
+<div class="glass-card-premium rounded-3xl p-space-xl flex flex-col justify-between luxury-depth-shadow hover:-translate-y-1.5 hover:shadow-xl transition-all duration-400 flex-1 min-h-[275px]">
+<div class="flex items-center justify-center pt-2">
+<div class="flex items-center gap-2">
+<div class="w-12 h-12 rounded-2xl bg-surface-container border border-white/80 flex items-center justify-center text-primary shadow-sm hover:scale-105 transition-transform"><span class="material-symbols-outlined text-[24px]">eco</span></div>
+<div class="w-12 h-12 rounded-2xl bg-surface-container border border-white/80 flex items-center justify-center text-tertiary shadow-sm hover:scale-105 transition-transform"><span class="material-symbols-outlined text-[24px]">grain</span></div>
+<div class="w-12 h-12 rounded-2xl bg-surface-container border border-white/80 flex items-center justify-center text-vegan-green shadow-sm hover:scale-105 transition-transform"><span class="material-symbols-outlined text-[24px]">spa</span></div>
+</div>
+</div>
+<div class="flex flex-col gap-space-xs mt-6">
+<h3 class="text-[24px] text-navy-heading"><span class="font-normal font-serif">Whole</span> <span class="font-bold">Ingredients</span></h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Golden pea protein, sprouted brown rice, pumpkin seed &amp; chicory inulin — no synthetic gums.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- STRATEGIC MILESTONE CTA 1 -->
+<div class="mt-4 p-6 rounded-2xl bg-surface-light border border-white/80 shadow-md flex flex-col sm:flex-row items-center justify-between gap-4">
+<div class="flex items-center gap-3 text-left">
+<span class="w-10 h-10 rounded-xl bg-vegan-green/10 text-vegan-green flex items-center justify-center font-bold shrink-0">
+<span class="material-symbols-outlined text-[22px]">check</span>
+</span>
+<div>
+<h4 class="font-bold text-navy-heading text-base">Experience Clean Nutrition — Try Vanilla Fudge 500g</h4>
+<p class="text-xs text-on-surface-variant">100% natural, certified vegan, 30-day money-back guarantee.</p>
+</div>
+</div>
+<a class="w-full sm:w-auto px-6 py-3 rounded-xl bg-navy-heading hover:bg-primary text-on-primary text-xs font-bold uppercase tracking-wider transition-all shadow-sm whitespace-nowrap text-center cursor-pointer" onclick="openCartDrawer()" href="javascript:void(0)">
+        Claim Your Pouch — $49.95
+      </a>
+</div>
+</div>
+</section>
+<!-- COMPARISON / "WHY SWITCH" SECTION (STREAMLINED WITH INTERACTIVE TABS) -->
+<section class="w-full bg-background-light py-12" id="comparison">
+<div class="max-w-[1440px] mx-auto px-margin flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs text-center items-center max-w-2xl mx-auto">
+<span class="font-eyebrow text-eyebrow text-primary uppercase tracking-widest">Interactive Direct Comparison</span>
+<p class="font-body-lg text-lg text-primary uppercase tracking-widest font-extrabold mt-2">THE NEW ME PROTOCOL</p>
+</div>
+<!-- Comparison Grid with responsive interactivity -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-xl items-stretch mt-6" id="comparison-container">
+<!-- Column 1: Conventional Powders -->
+<div class="bg-dark-section-surface p-space-2xl rounded-3xl border border-dark-section-border/40 flex flex-col gap-space-lg shadow-2xl relative overflow-hidden transition-all duration-300" id="col-regular">
+<div class="absolute -top-10 -right-10 w-48 h-48 bg-error/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-center gap-space-sm pb-space-sm border-b border-dark-section-border/40">
+<span class="w-8 h-8 rounded-full bg-error/10 text-error flex items-center justify-center font-bold shadow-xs">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</span>
+<span class="font-headline-sm text-headline-sm text-dark-section-text uppercase tracking-widest font-bold">CONVENTIONAL PROTEIN POWDERS</span>
+</div>
+<div class="flex flex-col gap-space-md">
+<div class="flex items-start gap-space-md p-3 rounded-xl hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-error text-[24px] mt-0.5 flex-shrink-0">cancel</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-dark-section-text">Digestive Distress &amp; Bloating</span>
+<span class="font-body-md text-body-md text-dark-section-muted">Synthetic isolates or harsh industrial processing leave you feeling heavy and uncomfortable.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-md p-3 rounded-xl hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-error text-[24px] mt-0.5 flex-shrink-0">cancel</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-dark-section-text">Glycemic Instability &amp; Crashes</span>
+<span class="font-body-md text-body-md text-dark-section-muted">Hidden maltodextrin and synthetic sweetening cause rapid glucose spikes and afternoon fatigue.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-md p-3 rounded-xl hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-error text-[24px] mt-0.5 flex-shrink-0">cancel</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-dark-section-text">Synthetic Fillers &amp; Heavy Gums</span>
+<span class="font-body-md text-body-md text-dark-section-muted">Thickened with xanthan, carrageenan, and harsh chemical flavoring agents.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-md p-3 rounded-xl hover:bg-white/5 transition-colors">
+<span class="material-symbols-outlined text-error text-[24px] mt-0.5 flex-shrink-0">cancel</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-dark-section-text">Chalky, Gritty Mouthfeel</span>
+<span class="font-body-md text-body-md text-dark-section-muted">Insoluble particles that ruin smoothies and leave an unpalatable aftertaste.</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Column 2: THE NEW ME Protocol -->
+<div class="bg-surface-light p-space-2xl rounded-3xl luxury-depth-shadow border-2 border-primary/30 hover:-translate-y-1.5 transition-all duration-300 flex flex-col gap-space-lg relative overflow-hidden" id="col-newme">
+<div class="absolute top-0 right-0 w-48 h-48 bg-vegan-green/10 rounded-full blur-3xl pointer-events-none"></div>
+<div class="flex items-center justify-between pb-space-sm border-b border-border-light">
+<div class="flex items-center gap-space-sm">
+<span class="w-8 h-8 rounded-full bg-vegan-green text-on-primary flex items-center justify-center font-bold shadow-md">
+<span class="material-symbols-outlined text-[18px]">check</span>
+</span>
+<span class="font-headline-sm text-headline-sm text-navy-heading uppercase tracking-widest font-bold">THE NEW ME PROTOCOL</span>
+</div>
+<span class="text-xs px-2.5 py-1 rounded-full bg-vegan-green/10 text-vegan-green font-bold uppercase tracking-wider">Recommended</span>
+</div>
+<div class="flex flex-col gap-space-md relative z-10">
+<div class="flex items-start gap-space-md p-3 rounded-xl bg-surface-container-low/60 border border-white/80">
+<span class="material-symbols-outlined text-vegan-green text-[24px] mt-0.5 flex-shrink-0">check_circle</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-navy-heading">Effortless Gut Harmony</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Soluble prebiotic chicory fibre cushions digestion, promoting a calm, flat stomach.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-md p-3 rounded-xl bg-surface-container-low/60 border border-white/80">
+<span class="material-symbols-outlined text-vegan-green text-[24px] mt-0.5 flex-shrink-0">check_circle</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-navy-heading">Linear, Sustained Vitality</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Zero added sugar and active Vitamin B12 deliver steady cellular energy without crashes.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-md p-3 rounded-xl bg-surface-container-low/60 border border-white/80">
+<span class="material-symbols-outlined text-vegan-green text-[24px] mt-0.5 flex-shrink-0">check_circle</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-navy-heading">Apothecary Botanical Purity</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Certified vegan, soy-free, gluten-free, with zero artificial sweeteners or coloring.</span>
+</div>
+</div>
+<div class="flex items-start gap-space-md p-3 rounded-xl bg-surface-container-low/60 border border-white/80">
+<span class="material-symbols-outlined text-vegan-green text-[24px] mt-0.5 flex-shrink-0">check_circle</span>
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-navy-heading">Velvety Vanilla Confection</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Micro-pulverized plant proteins dissolve into a silky, dessert-like texture instantly.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Solution Banner -->
+<div class="w-full bg-navy-heading text-dark-section-text p-space-lg rounded-2xl text-center shadow-xl">
+<p class="font-headline-sm text-headline-sm tracking-wide">
+        Clean Nutrition. Real Results. <span class="text-secondary-container">|</span> Stronger You <span class="text-secondary-container">|</span> Better Digestion <span class="text-secondary-container">|</span> Healthier Every Day
+      </p>
+</div>
+</div>
+</section>
+<!-- INGREDIENTS SECTION (WITH INTERACTIVE EXPANDABLE CARDS) -->
+<section class="w-full bg-surface py-12" id="ingredients">
+<div class="max-w-[1440px] mx-auto px-margin flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs text-center items-center max-w-2xl mx-auto">
+<span class="font-eyebrow text-eyebrow text-primary uppercase tracking-widest">Pure Botanical Synergy</span>
+<h2 class="font-headline-xl text-headline-xl text-navy-heading tracking-tight">Clean Ingredients. Powerful Nutrition.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Click each botanical element to inspect clinical benefits and origin.</p>
+</div>
+<!-- 4 Interactive Ingredient Cards with Clickable Detail Drawers -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Pea Protein -->
+<div class="ingredient-card bg-surface-light rounded-2xl overflow-hidden border border-white/70 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group cursor-pointer" onclick="toggleIngredientDetail('pea-detail')">
+<div class="h-44 overflow-hidden bg-surface-container relative">
+<img alt="Organic golden pea protein" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtJec0y_WCstjzbohjlPebzOFmF8FR2DosUlvBj7vQfVviqEdb5hF0MLV_Twsrqyft7--QLBu_zYLI8XwFfNHJ86fprNLVBCPdz7dl_mMAX0O5wiciWvlY4t7fCvzPTdFCOZrhzsWGEV_0bhfET4C2K1To0y_7CBabv3XgxRAVw8ldWsOvKKI6hG6mB8z1o-b0Eogr09wR1ZRxrsGB0h8CXBUqO9CoRsgUuyd1V49HMoEcy2lpdOYZpA">
+<span class="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-navy-heading/80 text-white text-[11px] font-semibold backdrop-blur-xs">Tap to view</span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-xs flex-grow justify-between">
+<div>
+<span class="font-eyebrow text-eyebrow text-primary uppercase font-bold">Builds Muscle</span>
+<h3 class="font-headline-sm text-headline-sm text-navy-heading">Pea Protein</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">High-quality plant protein that helps build and repair lean muscles.</p>
+</div>
+<!-- Expandable drawer -->
+<div class="hidden mt-3 pt-3 border-t border-border-light text-xs text-text-muted-light bg-surface-container-low/50 p-2.5 rounded-lg" id="pea-detail">
+<strong class="text-navy-heading block">Rich in BCAAs:</strong> Supports rapid cellular recovery post-exercise without elevating digestive acidity.
+          </div>
+</div>
+</div>
+<!-- Brown Rice Protein -->
+<div class="ingredient-card bg-surface-light rounded-2xl overflow-hidden border border-white/70 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group cursor-pointer" onclick="toggleIngredientDetail('rice-detail')">
+<div class="h-44 overflow-hidden bg-surface-container relative">
+<img alt="Whole brown rice protein" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmyH3RgqHvV0nTIlKg2tez6rEzkezkq70eC0WyoZujZ4QACklr6xdsvVJdTEmpBFhpxmounmX3tqPkijs8lg5z20ClXVgu0Y7s5lrmiK36etRxBK9-JQOu4yMBuy99eGoRipX7cq2Dy23vILg36iAcs3Duhyo3XQVRSNyVlst6TAUwS3njabTg0DyJ7QAuWnT1zgrO1Jmm9qU78l0akSwGSp_PyfOncYGKAQk1cfy1dnDtnwCv0v-pHw">
+<span class="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-navy-heading/80 text-white text-[11px] font-semibold backdrop-blur-xs">Tap to view</span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-xs flex-grow justify-between">
+<div>
+<span class="font-eyebrow text-eyebrow text-primary uppercase font-bold">Sustains Energy</span>
+<h3 class="font-headline-sm text-headline-sm text-navy-heading">Brown Rice Protein</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Complete protein source that supports energy and overall health.</p>
+</div>
+<div class="hidden mt-3 pt-3 border-t border-border-light text-xs text-text-muted-light bg-surface-container-low/50 p-2.5 rounded-lg" id="rice-detail">
+<strong class="text-navy-heading block">Hypoallergenic:</strong> Sprouted for optimum bioavailability, complementing the amino acid profile of pea protein.
+          </div>
+</div>
+</div>
+<!-- Pumpkin Seed Protein -->
+<div class="ingredient-card bg-surface-light rounded-2xl overflow-hidden border border-white/70 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group cursor-pointer" onclick="toggleIngredientDetail('pumpkin-detail')">
+<div class="h-44 overflow-hidden bg-surface-container relative">
+<img alt="Pumpkin seed protein" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdqGzkv3QOZaaQk6Dsa7jBny4qmEoFre4nnmiPJQieG2Ju2X4aZcKclSN0NQkBWctF4Ysiu1KaPxt56I3FfX9nPkSxV4-AHjscedfQcpjI9xncX78K7Fh_CCo2WEhWWrnv74B0H2ZzOfoan6M6fLrGeveiPbDwVaPQ4IZDe-KX_wsFi16j81u7wnjv1x4uo5le4E9m-ti2kR70EndHBRTq52GYY5Wmpo3SsJzTR5u_OnVSgQ1BlUm3Zg">
+<span class="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-navy-heading/80 text-white text-[11px] font-semibold backdrop-blur-xs">Tap to view</span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-xs flex-grow justify-between">
+<div>
+<span class="font-eyebrow text-eyebrow text-primary uppercase font-bold">Supports Immunity</span>
+<h3 class="font-headline-sm text-headline-sm text-navy-heading">Pumpkin Seed Protein</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Rich in essential minerals and healthy fats to support vitality and immunity.</p>
+</div>
+<div class="hidden mt-3 pt-3 border-t border-border-light text-xs text-text-muted-light bg-surface-container-low/50 p-2.5 rounded-lg" id="pumpkin-detail">
+<strong class="text-navy-heading block">Zinc &amp; Magnesium Rich:</strong> Supports deep sleep recovery, cellular renewal, and balanced endocrine activity.
+          </div>
+</div>
+</div>
+<!-- Prebiotic Fibre -->
+<div class="ingredient-card bg-surface-light rounded-2xl overflow-hidden border border-white/70 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col group cursor-pointer" onclick="toggleIngredientDetail('fibre-detail')">
+<div class="h-44 overflow-hidden bg-surface-container relative">
+<img alt="Chicory root inulin prebiotic fibre" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQ6TjRsMU2KNdtLYvslOVcqS2jh71Wz_npmDEA2Rf9Fv1-WrYFDaFN3wYsCjHarvR6dfbs5rRyKPxouPTBmmOxYRe-iTASiTRy9AE3LGzSSf2iKorbAvoOI0erb_dxIMY9QyC1OnD_6aHBEUCCNvn0eD8y0CO28M5CEX9gOWbY1hr8VdNTlhtFz1G5Upf4sa2P1Xqi1XD4baBoZxA7ffj99mVmPTWUjIl5ARtHThhvuCDvIMgL6SkBRA">
+<span class="absolute top-3 right-3 px-2 py-0.5 rounded-full bg-navy-heading/80 text-white text-[11px] font-semibold backdrop-blur-xs">Tap to view</span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-xs flex-grow justify-between">
+<div>
+<span class="font-eyebrow text-eyebrow text-primary uppercase font-bold">Gut Health</span>
+<h3 class="font-headline-sm text-headline-sm text-navy-heading">Prebiotic Fibre</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">Supports gut health, improves digestion and helps you feel lighter.</p>
+</div>
+<div class="hidden mt-3 pt-3 border-t border-border-light text-xs text-text-muted-light bg-surface-container-low/50 p-2.5 rounded-lg" id="fibre-detail">
+<strong class="text-navy-heading block">Chicory Root Inulin:</strong> Nourishes beneficial Bifidobacteria for optimal microbiome balance and zero distension.
+          </div>
+</div>
+</div>
+</div>
+<!-- B12 Banner Callout -->
+<div class="bg-primary/5 border border-primary/15 p-space-lg rounded-2xl flex flex-col md:flex-row items-center justify-between gap-space-md shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-xl bg-primary text-on-primary flex items-center justify-center flex-shrink-0 shadow-md">
+<span class="material-symbols-outlined text-[24px]">electric_bolt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-navy-heading font-bold">Plus: Essential Vitamin B12 Fortification</span>
+<p class="font-body-md text-body-md text-on-surface-variant">Essential for clean neurological support, mitochondrial ATP output, and metabolism.</p>
+</div>
+</div>
+<span class="px-4 py-2 rounded-full bg-surface-light border border-border-light text-navy-heading font-label-sm text-label-sm shadow-sm whitespace-nowrap font-bold">
+        100% Bioavailable
+      </span>
+</div>
+<!-- "Every Scoop Supports" stat bar -->
+<div class="bg-surface-light p-space-xl rounded-2xl border border-white/80 shadow-[0_15px_35px_-10px_rgba(0,75,131,0.07)] flex flex-col gap-space-md">
+<span class="font-eyebrow text-eyebrow text-text-muted-light uppercase tracking-wider text-center font-bold">Every Scoop Delivers</span>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-space-md text-center">
+<div class="flex flex-col">
+<span class="font-stat-number text-stat-number text-navy-heading">18.8g</span>
+<span class="font-stat-label text-stat-label text-text-muted-light uppercase mt-1">Plant Protein</span>
+</div>
+<div class="flex flex-col">
+<span class="font-stat-number text-stat-number text-navy-heading">4.8g</span>
+<span class="font-stat-label text-stat-label text-text-muted-light uppercase mt-1">Prebiotic Fibre</span>
+</div>
+<div class="flex flex-col">
+<span class="font-stat-number text-stat-number text-navy-heading">ALL 9</span>
+<span class="font-stat-label text-stat-label text-text-muted-light uppercase mt-1">Essential Aminos</span>
+</div>
+<div class="flex flex-col">
+<span class="font-stat-number text-stat-number text-navy-heading">B12</span>
+<span class="font-stat-label text-stat-label text-text-muted-light uppercase mt-1">Metabolism</span>
+</div>
+<div class="col-span-2 md:col-span-1 flex flex-col">
+<span class="font-stat-number text-stat-number text-navy-heading">ZERO</span>
+<span class="font-stat-label text-stat-label text-text-muted-light uppercase mt-1">Added Sugar</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- NEW SECTION: STORY OF PRODUCT -->
+<section class="w-full bg-[#F4EFEA] py-20 border-y border-border-light/60" id="story-of-product">
+  <div class="max-w-[1440px] mx-auto px-margin flex flex-col gap-12">
+    <!-- Header -->
+    <div class="flex flex-col gap-3 text-center items-center max-w-3xl mx-auto">
+      <span class="px-4 py-1.5 rounded-full bg-vegan-green/10 text-vegan-green font-eyebrow text-xs uppercase tracking-widest border border-vegan-green/20 shadow-xs font-bold">
+        OUR ORIGIN · AUSTRALIAN PURITY IN INDIA
+      </span>
+      <h2 class="font-headline-xl text-3xl sm:text-4xl md:text-5xl text-navy-heading tracking-tight font-serif leading-tight">
+        The Story of Our Product
+      </h2>
+      <p class="font-body-lg text-base sm:text-lg text-on-surface-variant max-w-2xl font-medium">
+        We searched everywhere for an uncompromised plant protein. When we couldn't find it, we crossed oceans to discover Australian plant protein and bring it home to India.
+      </p>
+    </div>
+
+    <!-- Main Story Content Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+      <!-- Story Narrative Box -->
+      <div class="lg:col-span-7 flex flex-col gap-6 bg-white p-8 sm:p-10 rounded-3xl luxury-depth-shadow border border-white/80 justify-between">
+        <div class="flex items-center gap-3">
+          <span class="w-12 h-12 rounded-2xl bg-vegan-green/10 text-vegan-green flex items-center justify-center font-bold shrink-0">
+            <span class="material-symbols-outlined text-[28px]">explore</span>
+          </span>
+          <h3 class="font-serif text-2xl text-navy-heading font-bold">The Quest for Uncompromised Nutrition</h3>
+        </div>
+
+        <div class="space-y-4 font-body-md text-base text-on-surface-variant leading-relaxed">
+          <p>
+            For years in India, finding a truly clean, digestibly harmonious plant protein was virtually impossible. Most commercial options were loaded with synthetic fillers, artificial sweeteners, or heavy industrial isolates that left you feeling bloated, sluggish, and uncomfortable.
+          </p>
+          <p>
+            We believed wellness seekers deserved better—a formula with zero grittiness, zero bloating, and complete botanical integrity. But no matter where we searched across local markets, no product met our apothecarial standards of clean purity.
+          </p>
+          
+          <!-- Story Feature Image Card -->
+          <div class="rounded-2xl overflow-hidden shadow-md my-3 border border-border-light relative group h-56">
+            <img src="images/australian_farm.jpg" alt="Sun-drenched Australian Golden Pea Farms" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-heading/85 via-transparent to-transparent flex items-end p-4">
+              <span class="text-white text-xs sm:text-sm font-bold flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-vegan-green inline-block"></span>
+                Pristine Australian Golden Pea Fields — Sourced At Origin
+              </span>
+            </div>
+          </div>
+
+          <p class="font-semibold text-navy-heading bg-vegan-green/5 p-4 rounded-xl border-l-4 border-vegan-green">
+            Then came our breakthrough discovery in Australia.
+          </p>
+          <p>
+            In Australia, we discovered pristine Golden Pea crops cultivated under pure sunlight and mineral-rich soils. Using advanced low-temperature milling, Australian plant protein isolates yield an unprecedented silky texture, exceptional solubility, and a 100% complete amino acid profile without any harsh processing.
+          </p>
+          <p>
+            We brought this world-class Australian plant protein isolate directly to India for the very first time, pairing it with digestive prebiotic chicory fiber and bioavailable Vitamin B12 to create <strong>THE NEW ME PROTOCOL</strong>.
+          </p>
+        </div>
+      </div>
+
+      <!-- Story Visual Journey Column -->
+      <div class="lg:col-span-5 flex flex-col gap-6 justify-between">
+        <!-- Visual Card 1: Australian Sourcing -->
+        <div class="glass-card-premium rounded-3xl overflow-hidden luxury-depth-shadow border border-white/80 flex flex-col group">
+          <div class="h-44 overflow-hidden relative">
+            <img src="images/australian_farm.jpg" alt="Australian Golden Pea Farm Sourcing" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-navy-heading text-white text-xs font-bold shadow-md">
+              🇦🇺 STEP 01 · AUSTRALIAN FARMS
+            </span>
+          </div>
+          <div class="p-5 flex flex-col gap-1">
+            <h4 class="font-bold text-navy-heading text-lg font-serif">Pristine Sourcing</h4>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Cultivated in Australia's rich mineral soil under pure sunlight for raw botanical purity.</p>
+          </div>
+        </div>
+
+        <!-- Visual Card 2: Low-Temperature Milling -->
+        <div class="glass-card-premium rounded-3xl overflow-hidden luxury-depth-shadow border border-white/80 flex flex-col group">
+          <div class="h-44 overflow-hidden relative">
+            <img src="images/botanical_powder_lab.jpg" alt="Apothecary Botanical Powder Extraction" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-vegan-green text-white text-xs font-bold shadow-md">
+              🧪 STEP 02 · BOTANICAL MILLING
+            </span>
+          </div>
+          <div class="p-5 flex flex-col gap-1">
+            <h4 class="font-bold text-navy-heading text-lg font-serif">Cold Physical Extraction</h4>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Low-temperature micro-pulverizing retains live plant nutrients and ensures zero grittiness.</p>
+          </div>
+        </div>
+
+        <!-- Visual Card 3: Brought to India -->
+        <div class="glass-card-premium rounded-3xl overflow-hidden luxury-depth-shadow border border-white/80 flex flex-col group">
+          <div class="h-44 overflow-hidden relative">
+            <img src="images/pouch_blue_glow_bg.jpg" alt="THE NEW ME Protocol Pouch in India" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-navy-heading text-white text-xs font-bold shadow-md">
+              🇮🇳 STEP 03 · BROUGHT TO INDIA
+            </span>
+          </div>
+          <div class="p-5 flex flex-col gap-1">
+            <h4 class="font-bold text-navy-heading text-lg font-serif">First-In-India Protocol</h4>
+            <p class="text-xs text-on-surface-variant leading-relaxed">Formulated into a 3-in-1 complete cellular protocol exclusively for wellness seekers in India.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INSPIRATIONAL QUOTE BANNER SECTION (MOVED & RELEVANT TO PLANT PROTEIN) -->
+<section class="relative w-full overflow-hidden py-20 sm:py-24 flex items-center justify-center min-h-[300px]">
+  <div class="absolute inset-0 z-0">
+    <img src="images/quote_powder_scoop_bg.jpg" alt="Botanical Plant Protein Powder with Scoop" class="w-full h-full object-cover object-center filter brightness-90">
+    <div class="absolute inset-0 bg-[#0f291b]/80 backdrop-blur-[1px]"></div>
+  </div>
+  <div class="relative z-10 max-w-4xl mx-auto px-margin text-center flex flex-col items-center justify-center gap-3">
+    <blockquote class="font-sans text-2xl sm:text-3xl md:text-4xl text-white font-extrabold tracking-tight leading-[1.3] max-w-3xl drop-shadow-md">
+      &ldquo;Nourishing your body with clean, unadulterated plant protein is the highest form of self-care. Pure botanical ingredients empower a healthier, stronger tomorrow.&rdquo;
+    </blockquote>
+    <p class="font-sans text-xs sm:text-sm text-white/90 font-bold uppercase tracking-[0.2em] pt-2">
+      &mdash; GAGAN DHAWAN
+    </p>
+  </div>
+</section>
+
+<!-- CULINARY SENSORY GRADE SECTION -->
+<section class="w-full bg-surface py-16" id="sensory">
+<div class="max-w-[1440px] mx-auto px-margin">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-2xl items-center">
+<div class="lg:col-span-6 flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<span class="font-eyebrow text-eyebrow text-tertiary uppercase tracking-widest font-bold">Culinary Sensory Grade</span>
+<h2 class="font-headline-xl text-headline-xl text-navy-heading tracking-tight">Smooth. Creamy. Delicious.</h2>
+<p class="font-headline-sm text-headline-sm text-tertiary-container">Fuel your body. Love every sip.</p>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+          A rich, velvety texture with a delicate vanilla fudge profile you will look forward to every morning. Dissolves completely without gritty sediment.
+        </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-2">
+<div class="flex items-start gap-4 bg-white/90 p-5 sm:p-6 rounded-2xl border border-border-light/80 shadow-md hover:shadow-lg transition-all">
+<span class="material-symbols-outlined text-vegan-green text-[28px] mt-0.5 shrink-0">check_circle</span>
+<div class="flex flex-col">
+<span class="font-serif text-lg sm:text-xl text-navy-heading font-extrabold block mb-1">Easy to mix</span>
+<span class="text-sm sm:text-base text-on-surface-variant font-medium leading-relaxed">Mixes instantly in chilled water or your favorite plant beverage.</span>
+</div>
+</div>
+<div class="flex items-start gap-4 bg-white/90 p-5 sm:p-6 rounded-2xl border border-border-light/80 shadow-md hover:shadow-lg transition-all">
+<span class="material-symbols-outlined text-vegan-green text-[28px] mt-0.5 shrink-0">check_circle</span>
+<div class="flex flex-col">
+<span class="font-serif text-lg sm:text-xl text-navy-heading font-extrabold block mb-1">Naturally Sweetened</span>
+<span class="text-sm sm:text-base text-on-surface-variant font-medium leading-relaxed">Sweetened with monk fruit extracts.</span>
+</div>
+</div>
+<div class="flex items-start gap-4 bg-white/90 p-5 sm:p-6 rounded-2xl border border-border-light/80 shadow-md hover:shadow-lg transition-all">
+<span class="material-symbols-outlined text-vegan-green text-[28px] mt-0.5 shrink-0">check_circle</span>
+<div class="flex flex-col">
+<span class="font-serif text-lg sm:text-xl text-navy-heading font-extrabold block mb-1">Gentle on gut</span>
+<span class="text-sm sm:text-base text-on-surface-variant font-medium leading-relaxed">Prebiotic fibre eases gastro transit.</span>
+</div>
+</div>
+<div class="flex items-start gap-4 bg-white/90 p-5 sm:p-6 rounded-2xl border border-border-light/80 shadow-md hover:shadow-lg transition-all">
+<span class="material-symbols-outlined text-vegan-green text-[28px] mt-0.5 shrink-0">check_circle</span>
+<div class="flex flex-col">
+<span class="font-serif text-lg sm:text-xl text-navy-heading font-extrabold block mb-1">No chalkiness</span>
+<span class="text-sm sm:text-base text-on-surface-variant font-medium leading-relaxed">Silky, clean mouthfeel to the last drop.</span>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 relative">
+<div class="w-full h-80 sm:h-[420px] rounded-3xl overflow-hidden luxury-depth-shadow border border-white/80 relative group">
+<img alt="Velvety vanilla fudge shake" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoOLCa8fzxDPvK6cpKIaYC_jojSCQlCXhuJgJGYp3R9Uej8YOYciQXxpex3-tAg6OF2sRZq3XebzwxauhZVDjKGfzaXfsYGU9_-WcUAlNLwLCnx6DVZtfiixLX7lg87cL_V5IwW_TdT14HlhlM2Nnx4hf6rHt1o89zcaxlrDP3dwlPPiGciDWcvL6Yu2mpRDb56yIS-GKmuMZBqaVJkh9g9PK_4EK2TM6oaS9jI-HRgkbe0S0DI-RLzw">
+<div class="absolute inset-0 bg-gradient-to-t from-navy-heading/85 via-navy-heading/20 to-transparent flex items-end p-space-xl">
+<p class="text-on-primary font-headline-md text-headline-md tracking-tight drop-shadow-md">Zero Grittiness. Pure Creaminess.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- DAILY ROUTINE SECTION -->
+<section class="w-full bg-background-light py-12" id="routine">
+<div class="max-w-[1440px] mx-auto px-margin flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs text-center items-center max-w-2xl mx-auto">
+<span class="font-eyebrow text-eyebrow text-primary uppercase tracking-widest font-bold">Versatile Protocol</span>
+<h2 class="font-headline-xl text-headline-xl text-navy-heading tracking-tight">Made for EVERY Part of Your Day</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">One scoop seamlessly powers your morning, recovery, and evening ritual.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<div class="bg-surface-light rounded-2xl overflow-hidden border border-white/80 shadow-md hover:-translate-y-1.5 transition-all duration-300 flex flex-col group">
+<div class="h-52 overflow-hidden relative">
+<img alt="Morning breakfast shake ritual" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_hhZNWr084CnWyDTxJixfYyF-ibVu40VyELfr9d3Q9rju0JQC5CYHqBqA1y5NwoQ7fdyrC-PzW9ieCh5vBRrISZESMmD9Ds2S0HxEGMx1zfyvyXezPEgVSxwo2yoN3dUzCweAHEM4K9O1G8E0MiLDtPDcngDRfOhc8kwAyaN3ZyuUqOIVhrfo1k-GghAZBH72QdHXmC4kAUIVsJXH8zi5l7DlWXVQNTJBaR80cRA6a_OLO7eV6eDp-Q">
+<span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-surface-light/95 backdrop-blur-md text-navy-heading font-eyebrow text-eyebrow font-bold shadow-md border border-white/60">MORNING</span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-sm flex-grow justify-between">
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-navy-heading">Kickstart Your Day</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Clean energy and essential nutrients to keep you focused and active.</p>
+</div>
+<span class="inline-flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-bold pt-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Sustained Energy
+          </span>
+</div>
+</div>
+<div class="bg-surface-light rounded-2xl overflow-hidden border border-white/80 shadow-md hover:-translate-y-1.5 transition-all duration-300 flex flex-col group">
+<div class="h-52 overflow-hidden relative">
+<img alt="Post workout recovery shaker" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUDPe6CaihUrYGZ79KdvbrLb-GOY1RkEuj1Sj5DH2izwxHe391lsjvZPnCtfjtvSEe7pAgQY9kz8Zgvrw6oXm3gNl2cuaN_CmPO5ic0K3f7-QStfc1wfY-0VBJiQ5Hh3ZhjWNygDCo8C2N3OBPgzYyzdStliBGry2vRYiIBGgfIAT-egx_dgupQiJb2erR__uGeskunmpHtIi2v_F-fv3rewj60lqv6WRUwmN5S36lxsA1Z7B82XchdQ">
+<span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-surface-light/95 backdrop-blur-md text-navy-heading font-eyebrow text-eyebrow font-bold shadow-md border border-white/60">POST WORKOUT</span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-sm flex-grow justify-between">
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-navy-heading">Recover &amp; Rebuild</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Pure plant protein to support lean muscle preservation and tissue repair.</p>
+</div>
+<span class="inline-flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-bold pt-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Muscle Synthesis
+          </span>
+</div>
+</div>
+<div class="bg-surface-light rounded-2xl overflow-hidden border border-white/80 shadow-md hover:-translate-y-1.5 transition-all duration-300 flex flex-col group">
+<div class="h-52 overflow-hidden relative">
+<img alt="Evening gentle warm plant shake" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA57PkxyYfQLPVJxyi1-Xf_Q24bQk5y6lmtF-wUW-Isie5bqWQuTgIujnKJKGOmSSKQAu3Sd25RfqjBW0A0VqysHclaKt_cD2CiJM2Lydh4Aqnf6YPjFEufSb_7WqAXpwbNOQ57eRpukkE-ECg4Fvejcn79Yob0VqrwgULnrKqEhnZ76c3uY0JHYtjTLWyRKvD6JD3DhjbBpSckAxT0wBHOMndK0dF5jvfcrlEscQwXUZAvPYW9wGlLIQ">
+<span class="absolute top-4 left-4 px-3 py-1 rounded-full bg-surface-light/95 backdrop-blur-md text-navy-heading font-eyebrow text-eyebrow font-bold shadow-md border border-white/60">EVENING</span>
+</div>
+<div class="p-space-lg flex flex-col gap-space-sm flex-grow justify-between">
+<div class="flex flex-col gap-space-xs">
+<h3 class="font-headline-md text-headline-md text-navy-heading">Nourish &amp; Unwind</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Light on your stomach, gentle on your gut for peaceful evening digestion.</p>
+</div>
+<span class="inline-flex items-center gap-1.5 font-label-sm text-label-sm text-primary font-bold pt-space-xs">
+<span class="w-2 h-2 rounded-full bg-primary"></span> Better Digestion
+          </span>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+<!-- NUTRITION SECTION (EXPANDABLE APOTHECARY DRAWER / TOGGLE) -->
+<section class="w-full bg-surface py-12" id="nutrition">
+<div class="max-w-5xl mx-auto px-margin flex flex-col gap-space-lg">
+<div class="flex flex-col gap-space-xs text-center items-center">
+<span class="px-4 py-1.5 rounded-full bg-vegan-green/10 text-vegan-green font-eyebrow text-eyebrow uppercase tracking-widest border border-vegan-green/20 shadow-xs font-bold">
+  STEP 03 · SCIENCE & PROOF
+</span>
+<h2 class="font-headline-xl text-headline-xl text-navy-heading tracking-tight">Transparent Nutrition. Powerful Results.</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Laboratory-verified panel per 33g scoop.</p>
+
+
+
+<!-- Interactive Toggle between Core Summary & Full Lab Panel -->
+<div class="inline-flex p-1 rounded-full bg-surface-container border border-border-light shadow-inner">
+<button class="px-5 py-2 rounded-full text-xs font-bold transition-all bg-navy-heading text-white shadow-xs" id="macro-toggle-summary" onclick="toggleNutritionView('summary')" type="button">
+          Core Macros
+        </button>
+<button class="px-5 py-2 rounded-full text-xs font-bold transition-all text-on-surface-variant hover:text-navy-heading" id="macro-toggle-full" onclick="toggleNutritionView('full')" type="button">
+          Full Lab Specification
+        </button>
+</div>
+</div>
+
+<!-- Core Macros Quick Visual Cards (Default View) -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="nutrition-summary-view">
+<div class="p-5 rounded-2xl bg-surface-light border border-white/90 shadow-sm text-center">
+<span class="text-xs text-text-muted-light uppercase font-bold tracking-wider">Bioavailable Protein</span>
+<span class="font-stat-number text-3xl font-extrabold text-navy-heading block mt-2">18.8g</span>
+<span class="text-xs text-vegan-green font-semibold mt-1 block">40.9% RDA Per Scoop</span>
+</div>
+<div class="p-5 rounded-2xl bg-surface-light border border-white/90 shadow-sm text-center">
+<span class="text-xs text-text-muted-light uppercase font-bold tracking-wider">Prebiotic Inulin</span>
+<span class="font-stat-number text-3xl font-extrabold text-navy-heading block mt-2">4.8g</span>
+<span class="text-xs text-primary font-semibold mt-1 block">Smooth Digestion</span>
+</div>
+<div class="p-5 rounded-2xl bg-surface-light border border-white/90 shadow-sm text-center">
+<span class="text-xs text-text-muted-light uppercase font-bold tracking-wider">Active Added Sugar</span>
+<span class="font-stat-number text-3xl font-extrabold text-vegan-green block mt-2">0.0g</span>
+<span class="text-xs text-vegan-green font-semibold mt-1 block">Zero Glycemic Spikes</span>
+</div>
+<div class="p-5 rounded-2xl bg-surface-light border border-white/90 shadow-sm text-center">
+<span class="text-xs text-text-muted-light uppercase font-bold tracking-wider">Clean Energy</span>
+<span class="font-stat-number text-3xl font-extrabold text-navy-heading block mt-2">119 kcal</span>
+<span class="text-xs text-text-muted-light font-semibold mt-1 block">Calibrated Fuel</span>
+</div>
+</div>
+<!-- Full Lab Specification Table (Can be toggled or kept open) -->
+<div class="bg-surface-light rounded-3xl luxury-depth-shadow border border-white/80 overflow-hidden flex flex-col border-white/90" id="nutrition-full-view">
+<div class="bg-navy-heading text-dark-section-text p-space-md sm:p-space-lg flex flex-wrap items-center justify-between gap-space-md shadow-md">
+<div class="flex items-center gap-space-lg font-label-md text-label-md">
+<span class="">Serving Size: <strong class="text-secondary-container">33g</strong></span>
+<span class="">Servings Per Pack: <strong class="text-secondary-container">15</strong></span>
+</div>
+<span class="px-3.5 py-1 rounded-full bg-dark-section-surface text-secondary-container font-label-sm text-label-sm font-semibold border border-white/10 shadow-xs">
+          Net Weight: 500g
+        </span>
+</div>
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left font-body-md text-body-md">
+<thead>
+<tr class="bg-surface-container/70 text-on-surface font-headline-sm text-label-md border-b border-border-light">
+<th class="py-3 px-6 font-bold">Nutrients</th>
+<th class="py-3 px-6 font-bold">Per 100g</th>
+<th class="py-3 px-6 font-bold">Per Serving (33g)</th>
+<th class="py-3 px-6 text-right font-bold">% RDA Per Serving*</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-border-light/40">
+<tr class="bg-surface-light hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-6 font-bold text-navy-heading">Energy (kcal)</td>
+<td class="py-2.5 px-6 text-on-surface-variant">361</td>
+<td class="py-2.5 px-6 font-semibold text-navy-heading">119.1</td>
+<td class="py-2.5 px-6 text-right text-on-surface-variant">5.96%</td>
+</tr>
+<tr class="bg-background-light hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-6 font-bold text-navy-heading">Protein (g)</td>
+<td class="py-2.5 px-6 text-on-surface-variant">56.9</td>
+<td class="py-2.5 px-6 font-bold text-primary">18.8</td>
+<td class="py-2.5 px-6 text-right font-bold text-primary">40.87%</td>
+</tr>
+<tr class="bg-surface-light hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-6 text-on-surface">Carbohydrate (g)</td>
+<td class="py-2.5 px-6 text-on-surface-variant">15.9</td>
+<td class="py-2.5 px-6 text-on-surface">5.2</td>
+<td class="py-2.5 px-6 text-right text-text-muted-light">–</td>
+</tr>
+<tr class="bg-background-light hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-6 font-semibold text-navy-heading">Added Sugars (g)</td>
+<td class="py-2.5 px-6 text-on-surface-variant">0.00</td>
+<td class="py-2.5 px-6 font-semibold text-vegan-green">0.00</td>
+<td class="py-2.5 px-6 text-right font-semibold text-vegan-green">0.00%</td>
+</tr>
+<tr class="bg-surface-light hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-6 font-bold text-navy-heading">Dietary Fibre (g)</td>
+<td class="py-2.5 px-6 text-on-surface-variant">14.6</td>
+<td class="py-2.5 px-6 font-bold text-primary">4.8</td>
+<td class="py-2.5 px-6 text-right font-bold text-primary">19.2%</td>
+</tr>
+<tr class="bg-background-light hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-6 text-on-surface">Total Fat (g)</td>
+<td class="py-2.5 px-6 text-on-surface-variant">4.1</td>
+<td class="py-2.5 px-6 text-on-surface">1.35</td>
+<td class="py-2.5 px-6 text-right text-on-surface-variant">2.01%</td>
+</tr>
+<tr class="bg-surface-light hover:bg-surface-container-low transition-colors">
+<td class="py-2.5 px-6 text-on-surface">Sodium (mg)</td>
+<td class="py-2.5 px-6 text-on-surface-variant">458.9</td>
+<td class="py-2.5 px-6 text-on-surface">151.14</td>
+<td class="py-2.5 px-6 text-right text-on-surface-variant">7.56%</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-3 bg-surface-container-low text-text-muted-light font-body-sm text-xs text-center border-t border-border-light/60">
+        * %RDA values based on ICMR 2020 for moderate work women. — RDA values not established.
+      </div>
+</div>
+</div>
+</section>
+
+
+<!-- REVIEWS SECTION -->
+<section class="w-full bg-surface-light py-12 pb-16" id="reviews">
+<div class="max-w-[1440px] mx-auto px-margin flex flex-col gap-space-lg">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<span class="font-eyebrow text-eyebrow text-primary uppercase tracking-widest font-bold">Community Real Feedback</span>
+<h2 class="font-headline-xl text-headline-xl text-navy-heading tracking-tight">What The NEW ME Community Says</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Verified experiences from real people feeling lighter and stronger.</p>
+</div>
+<!-- Rating Summary Block -->
+<div class="flex items-center gap-space-md bg-background-light border border-border-light/80 p-space-md rounded-2xl shadow-sm">
+<span class="font-stat-number text-stat-number text-navy-heading">4.9</span>
+<div class="flex flex-col">
+<div class="flex items-center text-tertiary-container">
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted-light">Based on 1,420+ verified community ratings</span>
+</div>
+</div>
+</div>
+<!-- 3 Verified Review Cards -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-lg">
+<div class="bg-background-light p-space-xl rounded-2xl border border-border-light/70 flex flex-col justify-between gap-space-md shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex text-tertiary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted-light">2 days ago</span>
+</div>
+<p class="font-body-md text-body-md text-navy-heading leading-relaxed font-medium">
+            "Finally a plant protein that doesn't cause bloating or stomach heaviness! The vanilla fudge flavour tastes like a rich, creamy shake without any chalky texture. I drink it every morning post workout."
+          </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="w-9 h-9 rounded-full bg-secondary-container/40 flex items-center justify-center font-bold text-navy-heading shadow-xs">AS</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-navy-heading font-bold">Ananya S.</span>
+<span class="font-body-sm text-body-sm text-vegan-green flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified Buyer
+            </span>
+</div>
+</div>
+</div>
+<div class="bg-background-light p-space-xl rounded-2xl border border-border-light/70 flex flex-col justify-between gap-space-md shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex text-tertiary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted-light">1 week ago</span>
+</div>
+<p class="font-body-md text-body-md text-navy-heading leading-relaxed font-medium">
+            "The added prebiotic fibre makes an incredible difference for Indian diets. Zero bloating after tough training sessions, and clean plant protein is perfect for hitting daily macros."
+          </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="w-9 h-9 rounded-full bg-secondary-container/40 flex items-center justify-center font-bold text-navy-heading shadow-xs">RK</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-navy-heading font-bold">Rohan K.</span>
+<span class="font-body-sm text-body-sm text-vegan-green flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified Buyer
+            </span>
+</div>
+</div>
+</div>
+<div class="bg-background-light p-space-xl rounded-2xl border border-border-light/70 flex flex-col justify-between gap-space-md shadow-sm hover:shadow-xl hover:-translate-y-1.5 transition-all duration-300">
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex text-tertiary-container">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="font-body-sm text-body-sm text-text-muted-light">2 weeks ago</span>
+</div>
+<p class="font-body-md text-body-md text-navy-heading leading-relaxed font-medium">
+            "Cleanest nutrition profile on the market in India. Love that there is zero added sugar and no cheap soy fillers. Mixes so smoothly in cold water or plant smoothies!"
+          </p>
+</div>
+<div class="flex items-center gap-space-sm pt-space-xs">
+<div class="w-9 h-9 rounded-full bg-secondary-container/40 flex items-center justify-center font-bold text-navy-heading shadow-xs">PM</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-navy-heading font-bold">Priya M.</span>
+<span class="font-body-sm text-body-sm text-vegan-green flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[14px]">verified</span> Verified Buyer
+            </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- FOOTER -->
+<!-- FOOTER SECTION (EXACT REPLICA OF BRAND DESIGN) -->
+<footer class="w-full bg-[#F8F7F2] text-[#1A1A1A] pt-14 pb-10 border-t border-[#E0E0E0]">
+  <div class="max-w-[1440px] mx-auto px-6 sm:px-12 lg:px-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-14 pb-12">
+      
+      <!-- Col 1: Brand Logo, Subhead & Social Icons -->
+      <div class="flex flex-col gap-6">
+        <div class="flex items-center gap-3">
+          <!-- Circular Footer Brand Logo Badge -->
+          <div class="relative w-12 h-12 sm:w-14 sm:h-14 shrink-0 rounded-full overflow-hidden shadow-md border-2 border-[#1F3E21]/20 bg-[#EEF6F0] flex items-center justify-center">
+            <img 
+              src="images/full_logo.png" 
+              alt="THE NEW ME 2.0 Logo" 
+              class="w-full h-full object-cover"
+            />
+          </div>
+          <div class="flex flex-col">
+            <span class="text-3xl font-extrabold text-[#1F3E21] tracking-tight font-sans leading-none">the new me</span>
+            <span class="text-[11px] font-bold text-[#1A1A1A] tracking-[0.16em] uppercase mt-2">EAT • FOCUS • REBUILD • LIVE</span>
+          </div>
+        </div>
+        
+        <!-- Social Icons (Instagram, Facebook, YouTube, LinkedIn, X) -->
+        <div class="flex items-center gap-4 text-[#1F3E21] pt-1">
+          <!-- Instagram -->
+          <a href="#" class="hover:opacity-75 transition-opacity" aria-label="Instagram">
+            <svg class="w-5 h-5 fill-none stroke-current stroke-2" viewBox="0 0 24 24">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <!-- Facebook -->
+          <a href="#" class="hover:opacity-75 transition-opacity" aria-label="Facebook">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M22 12c0-5.52-4.48-10-10-10S2 6.48 2 12c0 4.99 3.66 9.12 8.44 9.88v-6.99H7.9v-2.89h2.54V9.8c0-2.51 1.49-3.89 3.78-3.89 1.09 0 2.23.19 2.23.19v2.47h-1.26c-1.24 0-1.63.77-1.63 1.56v1.88h2.78l-.45 2.89h-2.33v6.99C18.34 21.12 22 16.99 22 12z"/>
+            </svg>
+          </a>
+          <!-- YouTube -->
+          <a href="#" class="hover:opacity-75 transition-opacity" aria-label="YouTube">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="#" class="hover:opacity-75 transition-opacity" aria-label="LinkedIn">
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/>
+            </svg>
+          </a>
+          <!-- X (Twitter) -->
+          <a href="#" class="hover:opacity-75 transition-opacity" aria-label="X">
+            <svg class="w-4.5 h-4.5 fill-current" viewBox="0 0 24 24">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Col 2: Quick Links -->
+      <div class="flex flex-col gap-3">
+        <h4 class="font-bold text-base text-[#1A1A1A] mb-1">Quick Links</h4>
+        <ul class="flex flex-col gap-2 text-sm text-[#555555]">
+          <li><a href="#" class="hover:text-[#1F3E21] transition-colors">Home</a></li>
+          <li><a href="#story" class="hover:text-[#1F3E21] transition-colors">About Us</a></li>
+          <li><a href="#" class="hover:text-[#1F3E21] transition-colors">The Book</a></li>
+          <li><a href="#" class="hover:text-[#1F3E21] transition-colors">Blog</a></li>
+          <li><a href="#contact" class="hover:text-[#1F3E21] transition-colors">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 3: Help -->
+      <div class="flex flex-col gap-3">
+        <h4 class="font-bold text-base text-[#1A1A1A] mb-1">Help</h4>
+        <ul class="flex flex-col gap-2 text-sm text-[#555555]">
+          <li><a href="#" class="hover:text-[#1F3E21] transition-colors">FAQs</a></li>
+          <li><a href="#" class="hover:text-[#1F3E21] transition-colors">Terms &amp; Conditions</a></li>
+          <li><a href="#" class="hover:text-[#1F3E21] transition-colors">Privacy Policy</a></li>
+          <li><a href="#" class="hover:text-[#1F3E21] transition-colors">Return Policy</a></li>
+          <li><a href="#" class="hover:text-[#1F3E21] transition-colors">Delivery Policy</a></li>
+          <li><a href="#" class="hover:text-[#1F3E21] transition-colors">Cancellation Policy</a></li>
+        </ul>
+      </div>
+
+      <!-- Col 4: Contact Us -->
+      <div class="flex flex-col gap-3">
+        <h4 class="font-bold text-base text-[#1A1A1A] mb-1">Contact Us</h4>
+        <div class="flex flex-col gap-3 text-sm text-[#555555]">
+          <p class="leading-relaxed">
+            Plot No 49, Pace City - 1,<br>
+            Sector 37, Gurgaon, Haryana -<br>
+            122004
+          </p>
+          <p><a href="mailto:info@thenewme.com" class="hover:text-[#1F3E21] transition-colors">info@thenewme.com</a></p>
+          <p><a href="tel:+919958975112" class="hover:text-[#1F3E21] transition-colors">+91 9958975112</a></p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Divider Line & Copyright Bar -->
+    <div class="border-t border-[#E0E0E0] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-[#555555]">
+      <p>© 2026 The New Me. All rights reserved.</p>
+      <p>A Healthier, Happier You, Always.</p>
+    </div>
+  </div>
+</footer>
+<!-- LIGHTWEIGHT CLIENT SCRIPT FOR INTERACTIVITY & CRO ENHANCEMENTS -->
+<script>
+  // 1. Sticky Floating Buy Bar on Scroll
+  window.addEventListener('scroll', function() {
+    const stickyBar = document.getElementById('sticky-sub-bar');
+    if (window.scrollY > 400) {
+      stickyBar.classList.remove('-translate-y-full');
+    } else {
+      stickyBar.classList.add('-translate-y-full');
+    }
+  });
+
+  // 2. Interactive Bundle Selection & Dynamic Pricing Update
+  const bundleOptions = document.querySelectorAll('input[name="bundle_choice"]');
+  const bundleLabels = document.querySelectorAll('.bundle-option');
+  const planLabel = document.getElementById('selected-plan-label');
+  const bundlePriceCTA = document.getElementById('bundle-price-cta');
+  const stickyPriceDisplay = document.getElementById('sticky-price-display');
+
+  bundleOptions.forEach((option, idx) => {
+    option.addEventListener('change', function() {
+      // Clear visual styles from all labels
+      bundleLabels.forEach(label => {
+        label.classList.remove('border-primary', 'bg-surface-container-low', 'ring-2', 'ring-primary/20', 'shadow-md');
+        label.classList.add('border-border-light', 'bg-background-light');
+        const indicator = label.querySelector('.radio-indicator');
+        if (indicator) {
+          indicator.className = 'radio-indicator w-4 h-4 rounded-full border-2 border-outline';
+        }
+      });
+
+      // Highlight selected card
+      const parent = this.closest('.bundle-option');
+      parent.classList.remove('border-border-light', 'bg-background-light');
+      parent.classList.add('border-primary', 'bg-surface-container-low', 'ring-2', 'ring-primary/20', 'shadow-md');
+      
+      const activeIndicator = parent.querySelector('.radio-indicator');
+      if (activeIndicator) {
+        activeIndicator.className = 'radio-indicator w-4 h-4 rounded-full border-2 border-navy-heading bg-navy-heading';
+      }
+
+      // Update CTA labels & price displays
+      const price = '$' + this.value;
+      const title = this.getAttribute('data-title') || 'Single Reserve Pouch (500g)';
+      
+      if (planLabel) planLabel.textContent = title;
+      if (bundlePriceCTA) bundlePriceCTA.textContent = price;
+      if (stickyPriceDisplay) stickyPriceDisplay.textContent = price;
+    });
+  });
+
+  // 3. Comparison Mode Tabs
+  function setComparisonMode(mode) {
+    const colRegular = document.getElementById('col-regular');
+    const colNewMe = document.getElementById('col-newme');
+    const btnSplit = document.getElementById('cmp-btn-split');
+    const btnNewMe = document.getElementById('cmp-btn-newme');
+    const btnRegular = document.getElementById('cmp-btn-regular');
+
+    // Reset button states
+    [btnSplit, btnNewMe, btnRegular].forEach(btn => {
+      if (btn) btn.className = 'px-5 py-2 rounded-full text-xs font-bold transition-all text-on-surface-variant hover:text-navy-heading';
+    });
+
+    if (mode === 'split') {
+      if (colRegular) { colRegular.classList.remove('hidden'); colRegular.classList.add('md:block'); }
+      if (colNewMe) { colNewMe.classList.remove('hidden'); colNewMe.classList.add('md:block'); }
+      if (btnSplit) btnSplit.className = 'px-5 py-2 rounded-full text-xs font-bold transition-all bg-navy-heading text-white shadow-sm';
+    } else if (mode === 'newme') {
+      if (colRegular) colRegular.classList.add('hidden');
+      if (colNewMe) colNewMe.classList.remove('hidden');
+      if (btnNewMe) btnNewMe.className = 'px-5 py-2 rounded-full text-xs font-bold transition-all bg-navy-heading text-white shadow-sm';
+    } else if (mode === 'regular') {
+      if (colRegular) colRegular.classList.remove('hidden');
+      if (colNewMe) colNewMe.classList.add('hidden');
+      if (btnRegular) btnRegular.className = 'px-5 py-2 rounded-full text-xs font-bold transition-all bg-navy-heading text-white shadow-sm';
+    }
+  }
+
+  // 4. Ingredient Card Accordion Toggle
+  function toggleIngredientDetail(id) {
+    const detail = document.getElementById(id);
+    if (detail) {
+      detail.classList.toggle('hidden');
+    }
+  }
+
+  // 4b. Hero 3D Stage Toggle
+  function toggleHero3DStage(btn) {
+    if (window.toggleHero3DStage && window.toggleHero3DStage !== toggleHero3DStage) {
+      window.toggleHero3DStage(btn);
+      return;
+    }
+    const showcase = document.getElementById('hero-img-showcase');
+    const canvas3d = document.getElementById('hero-3d-stage');
+    const textSpan = document.getElementById('toggle-hero-3d-text');
+    if (!showcase || !canvas3d) return;
+
+    if (canvas3d.classList.contains('hidden')) {
+      canvas3d.classList.remove('hidden');
+      showcase.classList.add('hidden');
+      if (textSpan) textSpan.textContent = 'View Product Visual';
+      setTimeout(() => { window.dispatchEvent(new Event('resize')); }, 30);
+    } else {
+      canvas3d.classList.add('hidden');
+      showcase.classList.remove('hidden');
+      if (textSpan) textSpan.textContent = 'Switch to 3D Canvas';
+    }
+  }
+
+  // 5. Nutrition Macro View Toggle
+  function toggleNutritionView(view) {
+    const summary = document.getElementById('nutrition-summary-view');
+    const full = document.getElementById('nutrition-full-view');
+    const btnSummary = document.getElementById('macro-toggle-summary');
+    const btnFull = document.getElementById('macro-toggle-full');
+
+    if (view === 'summary') {
+      summary.classList.remove('hidden');
+      full.classList.add('hidden');
+      btnSummary.className = 'px-5 py-2 rounded-full text-xs font-bold transition-all bg-navy-heading text-white shadow-xs';
+      btnFull.className = 'px-5 py-2 rounded-full text-xs font-bold transition-all text-on-surface-variant hover:text-navy-heading';
+    } else {
+      summary.classList.remove('hidden');
+      full.classList.remove('hidden');
+      btnFull.className = 'px-5 py-2 rounded-full text-xs font-bold transition-all bg-navy-heading text-white shadow-xs';
+      btnSummary.className = 'px-5 py-2 rounded-full text-xs font-bold transition-all text-on-surface-variant hover:text-navy-heading';
+    }
+  }
+
+  // 6. Nourish & Wellness Filter Toggle
+  function setActiveNourishFilter(type, btn) {
+    document.querySelectorAll('.nourish-pill').forEach(b => {
+      b.className = 'nourish-pill px-4 sm:px-5 py-2 rounded-full text-xs font-medium transition-all bg-white/10 hover:bg-white/20 text-white border border-white/20';
+    });
+    btn.className = 'nourish-pill active px-4 sm:px-5 py-2 rounded-full text-xs font-bold transition-all bg-[#38bdf8] text-[#041229] shadow-md border border-[#38bdf8]';
+    
+    const detail = document.getElementById('nourish-pill-detail');
+    if (!detail) return;
+    const descriptions = {
+      'all': 'Comprehensive 3-in-1 formulation supporting digestion, cellular energy, and lean muscle.',
+      'fibre': '4.8g chicory root prebiotic fibre feeds gut flora for zero bloating and effortless transit.',
+      'energy': 'Active bioavailable Vitamin B12 supports mitochondrial ATP output and daily focus.',
+      'protein': 'Complete plant bio-protein triple-blend (golden pea, brown rice & pumpkin seed) for 100% complete amino profile.',
+      'sugar': 'Naturally sweetened with monk fruit extract and stevia — 0.0g added refined sugars.'
+    };
+    detail.textContent = descriptions[type] || descriptions['all'];
+  }
+
+  // 6b. Mobile Menu Toggle
+  function toggleMobileMenu() {
+    const drawer = document.getElementById('mobile-menu-drawer');
+    if (drawer) {
+      drawer.classList.toggle('hidden');
+    }
+  }
+
+  // 7. REAL-TIME ANIMATION CONTROLLER (Scroll Reveal & Micro-Interactivity)
+  document.addEventListener('DOMContentLoaded', () => {
+    // Reveal elements on scroll
+    const targetSelectors = 'section > div, .glass-card-premium, .ingredient-card, #nourish-wellness-card, #comparison-container > div, .routine-card';
+    const revealElements = document.querySelectorAll(targetSelectors);
+    
+    revealElements.forEach((el, idx) => {
+      el.classList.add('reveal-on-scroll');
+      const stagger = (idx % 3) * 100;
+      el.style.transitionDelay = `${stagger}ms`;
+    });
+
+    const observerOptions = {
+      root: null,
+      rootMargin: '0px 0px -50px 0px',
+      threshold: 0.1
+    };
+
+    const scrollObserver = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          obs.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    revealElements.forEach(el => scrollObserver.observe(el));
+
+    // Floating animation on hero product visual
+    const heroImg = document.querySelector('#hero-img-showcase img');
+    if (heroImg) {
+      heroImg.classList.add('animate-soft-float');
+    }
+
+    // Shimmer effect on CTA buttons
+    document.querySelectorAll('a[onclick*="openCartDrawer"]').forEach(btn => {
+      btn.classList.add('btn-shimmer-effect');
+    });
+  // 8. Add to Cart Toast & Subscription Handlers
+  function handleAddToCart(name, price) {
+    const toast = document.getElementById('cart-toast');
+    const toastTitle = document.getElementById('cart-toast-title');
+    const toastPrice = document.getElementById('cart-toast-price');
+    
+    if (toastTitle) toastTitle.textContent = name;
+    if (toastPrice) {
+      toastPrice.textContent = price > 0 ? '$' + price.toFixed(2) + ' • Ready for Checkout' : 'Information & Benefit Unlocked!';
+    }
+    
+    if (toast) {
+      toast.classList.remove('translate-y-20', 'opacity-0', 'pointer-events-none');
+      setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0', 'pointer-events-none');
+      }, 3500);
+    }
+
+    // Update header cart badge count if item added
+    if (price > 0) {
+      const cartBadges = document.querySelectorAll('button[aria-label="Shopping Cart"] span:last-child');
+      cartBadges.forEach(badge => {
+        const current = parseInt(badge.textContent || '0') + 1;
+        badge.textContent = current;
+      });
+    }
+  }
+
+  function openCartDrawer() {
+    handleAddToCart('1x Reserve Pouch (500g)', 49.95);
+  }
+
+  function handleSubscribe(e) {
+    if (e) e.preventDefault();
+    const input = document.getElementById('newsletter-email');
+    const email = input ? input.value.trim() : '';
+    if (!email || !email.includes('@')) return;
+    handleAddToCart('Subscribed (' + email + ')! Check your inbox for $10 off coupon.', 0);
+    if (input) input.value = '';
+  }
+</script>
+
+<!-- CART TOAST NOTIFICATION CONTAINER -->
+<div id="cart-toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-500 pointer-events-none">
+  <div class="px-5 py-3.5 rounded-2xl bg-navy-heading text-white shadow-2xl border border-white/20 flex items-center gap-3">
+    <span class="w-7 h-7 rounded-full bg-vegan-green text-white flex items-center justify-center font-bold shrink-0">
+      <span class="material-symbols-outlined text-[16px]">check</span>
+    </span>
+    <div class="flex flex-col">
+      <span class="font-bold text-xs" id="cart-toast-title">1x Reserve Pouch Added</span>
+      <span class="text-[11px] text-sky-200" id="cart-toast-price">$49.95 • Ready for Checkout</span>
+    </div>
+  </div>
+</div>
+
+<!-- 3D REAL-TIME WEBGL ENGINE -->
+<script src="js/3d-engine.js"></script>
+
+<!-- AOS ANIMATION SYSTEM (gemini-code-1791541642284.html) -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 800,
+    once: true
+  });
+</script>
+
+</body></html>

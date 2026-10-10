@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <circle cx="100" cy="100" r="88" fill="#06152e" stroke="#38bdf8" stroke-width="9"/>
+  <!-- Center Main Leaf -->
+  <path d="M100,38 C122,72 122,112 100,142 C78,112 78,72 100,38 Z" fill="#38bdf8"/>
+  <path d="M100,42 L100,140" stroke="#ffffff" stroke-width="4" stroke-linecap="round"/>
+  <!-- Left Leaf -->
+  <path d="M94,118 C65,118 46,95 52,72 C74,74 90,95 94,118 Z" fill="#ffffff"/>
+  <path d="M92,116 C76,102 65,90 56,76" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+  <!-- Right Leaf -->
+  <path d="M106,118 C135,118 154,95 148,72 C126,74 110,95 106,118 Z" fill="#ffffff"/>
+  <path d="M108,116 C124,102 135,90 144,76" stroke="#38bdf8" stroke-width="3" stroke-linecap="round"/>
+  <!-- Stem Base -->
+  <path d="M100,142 L100,168" stroke="#38bdf8" stroke-width="8" stroke-linecap="round"/>
+  <path d="M82,160 L118,160" stroke="#38bdf8" stroke-width="6" stroke-linecap="round"/>
+</svg>
